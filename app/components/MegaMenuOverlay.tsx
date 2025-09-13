@@ -15,7 +15,8 @@ const MegaMenuOverlay = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="fixed inset-0 bg-black/20 backdrop-blur-lg z-30 pointer-events-none"
+          className="fixed inset-0 bg-black/20 backdrop-blur-lg pointer-events-none"
+          style={{ zIndex: 9998 }}
         />
       )}
     </AnimatePresence>

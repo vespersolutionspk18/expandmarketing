@@ -199,7 +199,7 @@ const MegaMenu = () => {
           </button>
 
           <div
-            className={`fixed top-20 left-1/2 transition-all duration-300 z-[60] ${
+            className={`fixed top-20 left-1/2 transition-all duration-300 ${
               activeDropdown === key
                 ? "opacity-100 visible pointer-events-auto"
                 : "opacity-0 invisible pointer-events-none"
@@ -210,7 +210,8 @@ const MegaMenu = () => {
                 : 'translateX(-50%) translateY(-12px)',
               WebkitTransform: activeDropdown === key 
                 ? 'translateX(-50%) translateY(0)' 
-                : 'translateX(-50%) translateY(-12px)'
+                : 'translateX(-50%) translateY(-12px)',
+              zIndex: 9999
             }}
             onMouseEnter={() => handleMouseEnter(key)}
             onMouseLeave={handleMouseLeave}

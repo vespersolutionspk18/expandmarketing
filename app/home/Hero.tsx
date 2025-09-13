@@ -229,9 +229,9 @@ const Hero = () => {
       ref={containerRef}
       className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100"
     >
-        <div className="relative z-50">
-          <Header />
-        </div>
+      <div className="relative z-50">
+        <Header />
+      </div>
       <div 
         ref={canvasRef}
         className="absolute"
