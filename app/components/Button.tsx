@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 interface ButtonProps {
   children: React.ReactNode
   href?: string
+  route?: string
   onClick?: () => void
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
@@ -19,6 +20,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   children,
   href,
+  route,
   onClick,
   variant = 'primary',
   size = 'md',
@@ -30,7 +32,9 @@ const Button: React.FC<ButtonProps> = ({
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    if (href) {
+    if (route) {
+      router.push(route)
+    } else if (href) {
       router.push(href)
     } else if (onClick) {
       onClick()
@@ -38,11 +42,11 @@ const Button: React.FC<ButtonProps> = ({
   }
 
   const variantStyles = {
-    primary: 'bg-black text-white disabled:bg-gray-400',
-    secondary: 'bg-white text-black disabled:bg-gray-200',
+    primary: 'bg-black text-white disabled:bg-stone-400',
+    secondary: 'bg-white text-black disabled:bg-stone-200',
     outline:
-      'border-2 border-black text-black disabled:border-gray-400 disabled:text-gray-400',
-    ghost: 'text-black disabled:text-gray-400'
+      'border-2 border-black text-black disabled:border-stone-400 disabled:text-stone-400',
+    ghost: 'text-black disabled:text-stone-400'
   }
 
   const sizes = {

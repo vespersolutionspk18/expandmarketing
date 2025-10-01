@@ -1,0 +1,363 @@
+================================================================================
+RISEATSEVEN.COM - COMPLETE SERVICES SECTION EXTRACTION
+================================================================================
+
+SECTION OVERVIEW:
+- Located in: <section class="w-full pb-12 | xl:pb-24">
+- Container: <div class="w-full px-4 | md:px-7">
+- Grid wrapper: <div class="grid grid-cols-12 overflow-hidden | lg:pt-5 | gap-y-3 | md:gap-y-7 gap-x-3 | md:gap-x-5">
+- Service cards grid: <div class="col-span-12 grid grid-cols-12 gap-x-2">
+
+ALL 6 SERVICES:
+1. Digital PR (https://riseatseven.com/services/digital-pr/)
+2. Organic Social & Content (https://riseatseven.com/services/social/)
+3. Search & Growth Strategy (https://riseatseven.com/services/strategy-growth/)
+4. Content Experience (https://riseatseven.com/services/content-experience/)
+5. Data & Insights (https://riseatseven.com/services/data-insights/)
+6. Onsite SEO (https://riseatseven.com/services/onsite-seo/)
+
+================================================================================
+COMPLETE SERVICE CARD HTML - "DIGITAL PR" CARD
+(Lines 6292-6456)
+================================================================================
+
+                    <div class="col-span-12 -my-px | md:col-span-6">
+
+                        <div class="group relative ">
+
+    <div class="absolute w-full bottom-0 left-0 z-0 | pointer-fine:px-12">
+        <div class="w-full h-px bg-grey-200"></div>
+    </div>
+
+    <a href="https://riseatseven.com/services/digital-pr/" class="grid grid-cols-1 relative z-10">
+
+
+        <div class="col-start-1 row-start-1 relative z-20 py-4 flex items-center gap-3 text-black transition duration-500 | lg:py-6 | pointer-fine:group-hover:text-white">
+
+
+            <div class="inline-flex relative w-12 h-12 rounded-lg overflow-hidden | md:rounded-xl md:w-16 md:h-16 | pointer-fine:hidden">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <picture class=" ">
+
+
+                                    <source
+                        type="image/webp"
+                        srcset="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=400&amp;h=400&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=ca4a2c3891fedbd3ca3a3d46af0e6362 400w"
+                        sizes="100vw"
+                    >
+
+                <img
+                    src="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=400&amp;h=400&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=ca4a2c3891fedbd3ca3a3d46af0e6362"
+                    srcset="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=400&amp;h=400&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=7ea281e95deb6580b017259baf4973c8 400w"
+                    sizes="100vw"
+                    alt="Screenshot 2025 06 23 at 22 39 35"
+                    class=" w-full h-full object-cover absolute inset-0 transition-opacity"
+                                        loading="lazy"
+                    style="opacity: 0;"
+                    onload="this.style.opacity='1';"
+                >
+
+        </picture>
+
+
+
+
+            </div>
+
+
+            <div class="pointer-fine:translate-x-10">
+
+                <div class="relative">
+
+                    <div class="absolute pr-2 top-0 left-0 overflow-hidden">
+
+                        <div class="transition -translate-x-full translate-y-full -rotate-45 | pointer-fine:group-hover:rotate-0 pointer-fine:group-hover:translate-x-0 pointer-fine:group-hover:translate-y-0">
+
+
+
+
+
+<h2 class="inline-flex flex-wrap text-balance relative   text-left justify-start text-current text-3xl/none | lg:text-4xl/none | xl:text-5xl/none | 3xl:text-6xl/none font-sans-primary font-medium tracking-tight js-heading" ><i class="fa-regular fa-sharp fa-arrow-up-right"></i></h2>
+                        </div>
+
+                    </div>
+
+                    <div class="transition | pointer-fine:group-hover:translate-x-14">
+
+
+
+
+<div class="inline-flex flex-wrap text-balance relative   text-left justify-start text-current text-3xl/none | lg:text-4xl/none | xl:text-5xl/none | 3xl:text-6xl/none font-sans-primary font-medium tracking-tight js-heading" >Digital PR</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-start-1 row-start-1 relative rounded-full overflow-hidden z-10 transition bg-black opacity-0 | pointer-fine:group-hover:opacity-100">
+
+            <div class="w-full h-full opacity-60 transition | pointer-fine:group-hover:scale-[1.05]">
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="relative overflow-hidden w-full h-full">
+
+
+        <picture class=" ">
+
+
+                                    <source
+                        type="image/webp"
+                        srcset="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=400&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=dd4d0d057300b83580ca70e0f81fd556 400w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=800&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=a5b7a24a900278d778e1a9cde25a81b1 800w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=1200&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=1a61b84b15dae35de54d3d7de3cf70da 1200w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=1600&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=5b5b62407763a7393413c17b27f3356f 1600w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=2000&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=6d24f03cd6433d18ffdc18236cf7a648 2000w"
+                        sizes="100vw"
+                    >
+
+                <img
+                    src="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=2000&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=6d24f03cd6433d18ffdc18236cf7a648"
+                    srcset="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=400&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=af7cbef9115df2644bfb28806c1449e2 400w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=800&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=be849e63ccc83703e62991c872d2529e 800w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=1200&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=3e64bb23bdf3b514d611ae4b4e332cbe 1200w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=1600&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=409d38d52f45bfca6a7368821ad7fccf 1600w, https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-22.39.35.png?w=2000&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1750847626&amp;s=b6dc2255ea51359e657d33d49bbd835d 2000w"
+                    sizes="100vw"
+                    alt="Screenshot 2025 06 23 at 22 39 35"
+                    class="absolute z-0 top-0 left-0 w-full h-full object-cover absolute z-0 top-0 left-0 w-full h-full w-full h-full object-cover absolute inset-0 transition-opacity"
+                                            style="object-position: 50% 50%"
+                                        loading="lazy"
+                    style="opacity: 0;"
+                    onload="this.style.opacity='1';"
+                >
+
+        </picture>
+
+
+            </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </a>
+
+</div>
+                    </div>
+
+================================================================================
+DETAILED BREAKDOWN
+================================================================================
+
+CONTAINER STRUCTURE:
+--------------------
+1. OUTER WRAPPER:
+   <div class="col-span-12 -my-px | md:col-span-6">
+   - Full width on mobile (col-span-12)
+   - Half width on medium+ (md:col-span-6)
+   - Negative margin to overlap borders (-my-px)
+
+2. GROUP CONTAINER:
+   <div class="group relative ">
+   - Creates hover group for nested elements
+
+3. BORDER DIVIDER:
+   <div class="absolute w-full bottom-0 left-0 z-0 | pointer-fine:px-12">
+       <div class="w-full h-px bg-grey-200"></div>
+   </div>
+   - Horizontal border at bottom
+   - Only has padding on desktop (pointer-fine:px-12)
+
+LINK & GRID:
+-----------
+<a href="..." class="grid grid-cols-1 relative z-10">
+   - Creates grid with single column
+   - Overlays on top of border (z-10)
+
+CARD LAYERS (Using CSS Grid Overlay):
+-------------------------------------
+Both layers use: class="col-start-1 row-start-1"
+This makes them overlap in the same grid cell
+
+LAYER 1 - CONTENT LAYER (Always Visible):
+-----------------------------------------
+<div class="col-start-1 row-start-1 relative z-20 py-4 flex items-center gap-3 text-black transition duration-500 | lg:py-6 | pointer-fine:group-hover:text-white">
+
+Classes breakdown:
+- col-start-1 row-start-1: Grid positioning (overlays with Layer 2)
+- relative z-20: Keeps content above background layer
+- py-4 | lg:py-6: Vertical padding (4 on mobile, 6 on lg+)
+- flex items-center gap-3: Flexbox horizontal layout
+- text-black: Default text color
+- transition duration-500: Smooth color transition
+- pointer-fine:group-hover:text-white: Text turns white on hover (desktop only)
+
+MOBILE THUMBNAIL (Only visible on mobile/touch devices):
+--------------------------------------------------------
+<div class="inline-flex relative w-12 h-12 rounded-lg overflow-hidden | md:rounded-xl md:w-16 md:h-16 | pointer-fine:hidden">
+   <picture>...</picture>
+</div>
+
+Classes breakdown:
+- inline-flex relative: Inline flex container
+- w-12 h-12: 48px × 48px on mobile
+- rounded-lg: Rounded corners on mobile
+- md:rounded-xl md:w-16 md:h-16: Larger size (64px) and more rounded on medium screens
+- pointer-fine:hidden: HIDDEN ON DESKTOP! Only shows on touch devices
+
+KEY FINDING: Mobile DOES have image thumbnails!
+
+TEXT/TITLE CONTAINER:
+--------------------
+<div class="pointer-fine:translate-x-10">
+   - On desktop, shifts right by 2.5rem (40px)
+   - On mobile/touch, stays at default position
+
+ARROW ANIMATION STRUCTURE:
+-------------------------
+<div class="relative">
+
+   <!-- Hidden arrow (slides in from bottom-left on hover) -->
+   <div class="absolute pr-2 top-0 left-0 overflow-hidden">
+       <div class="transition -translate-x-full translate-y-full -rotate-45 | pointer-fine:group-hover:rotate-0 pointer-fine:group-hover:translate-x-0 pointer-fine:group-hover:translate-y-0">
+           <h2 class="..."><i class="fa-regular fa-sharp fa-arrow-up-right"></i></h2>
+       </div>
+   </div>
+
+   <!-- Main title (slides right on hover) -->
+   <div class="transition | pointer-fine:group-hover:translate-x-14">
+       <div class="...">Digital PR</div>
+   </div>
+
+</div>
+
+Animation breakdown:
+1. Arrow starts: translate-x-full (off left) + translate-y-full (off bottom) + rotate-45
+2. On hover: transforms to translate-x-0, translate-y-0, rotate-0
+3. Title starts at normal position
+4. On hover: shifts right by 3.5rem (translate-x-14 = 56px)
+
+TEXT SIZE CLASSES:
+-----------------
+Service Title:
+text-3xl/none          (mobile: 1.875rem / 30px, line-height: 1)
+lg:text-4xl/none       (large: 2.25rem / 36px)
+xl:text-5xl/none       (xl: 3rem / 48px)
+3xl:text-6xl/none      (3xl: 3.75rem / 60px)
+
+Additional classes on title:
+- inline-flex flex-wrap text-balance
+- relative
+- text-left justify-start
+- text-current (inherits color from parent)
+- font-sans-primary font-medium
+- tracking-tight (tight letter spacing)
+- js-heading (JavaScript hook)
+
+LAYER 2 - BACKGROUND IMAGE LAYER (Desktop hover only):
+------------------------------------------------------
+<div class="col-start-1 row-start-1 relative rounded-full overflow-hidden z-10 transition bg-black opacity-0 | pointer-fine:group-hover:opacity-100">
+
+Classes breakdown:
+- col-start-1 row-start-1: Overlays with Layer 1 (same grid position)
+- relative z-10: Below content layer (z-20) but above border (z-0)
+- rounded-full: Makes background circular/pill-shaped
+- overflow-hidden: Clips image to rounded shape
+- transition: Smooth opacity change
+- bg-black: Black background color
+- opacity-0: Hidden by default
+- pointer-fine:group-hover:opacity-100: Shows on desktop hover only
+
+INNER IMAGE CONTAINER:
+---------------------
+<div class="w-full h-full opacity-60 transition | pointer-fine:group-hover:scale-[1.05]">
+   <div class="relative overflow-hidden w-full h-full">
+       <picture>
+           <source type="image/webp" srcset="...">
+           <img src="..." class="absolute z-0 top-0 left-0 w-full h-full object-cover..." />
+       </picture>
+   </div>
+</div>
+
+Classes breakdown:
+- w-full h-full: Fills parent container
+- opacity-60: Image at 60% opacity (combined with black bg)
+- transition: Smooth scale transition
+- pointer-fine:group-hover:scale-[1.05]: Zooms to 105% on hover
+- object-cover: Fills container while maintaining aspect ratio
+
+================================================================================
+MOBILE VS DESKTOP BEHAVIOR SUMMARY
+================================================================================
+
+MOBILE (Touch devices / pointer: coarse):
+------------------------------------------
+1. Thumbnail images: YES - shown at 48×48px (w-12 h-12)
+2. Text positioning: Normal (no translate-x-10)
+3. Text color: Always black
+4. Background layer: Hidden (opacity-0, no hover state)
+5. Arrow animation: None (stays hidden)
+6. Title slide animation: None
+7. Border padding: No padding (full width border)
+8. Padding: py-4 (1rem vertical)
+
+DESKTOP (Mouse/trackpad / pointer: fine):
+-----------------------------------------
+1. Thumbnail images: NO - hidden (pointer-fine:hidden)
+2. Text positioning: Shifted right 40px (pointer-fine:translate-x-10)
+3. Text color: Black default, white on hover
+4. Background layer: Shows on hover (opacity 0 → 100)
+5. Arrow animation: YES - slides in from bottom-left, rotates from -45° to 0°
+6. Title slide animation: YES - moves right 56px (translate-x-14)
+7. Border padding: px-12 (3rem horizontal padding)
+8. Padding: lg:py-6 (1.5rem vertical on large screens)
+9. Background zoom: Image scales 105% on hover
+10. Shape: Background becomes rounded-full on hover
+
+================================================================================
+KEY TAILWIND CLASSES USED
+================================================================================
+
+RESPONSIVE PREFIXES:
+- md: - Medium screens and up (768px+)
+- lg: - Large screens and up (1024px+)
+- xl: - Extra large screens (1280px+)
+- 3xl: - 3X large screens (1920px+)
+- 4xl: - 4X large screens
+
+POINTER MEDIA QUERIES:
+- pointer-fine: - Devices with precise pointing (mouse/trackpad)
+- pointer-coarse: - Touch devices
+
+CUSTOM SPACING:
+- translate-x-10: 2.5rem / 40px
+- translate-x-14: 3.5rem / 56px
+
+Z-INDEX LAYERS:
+- z-0: Border divider (bottom)
+- z-10: Background image layer (middle) + Link container
+- z-20: Content/text layer (top)
+
+================================================================================

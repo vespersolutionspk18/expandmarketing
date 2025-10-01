@@ -21,10 +21,21 @@ const Hero = () => {
   const canvasRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
   const [isLoaded, setIsLoaded] = useState(false)
-  
-  // Define hexagonal grid parameters
-  const HEX_WIDTH = 850 // Increased spacing back up
-  const HEX_HEIGHT = 736 // Height for equilateral hex (width * sqrt(3)/2)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Detect mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Define hexagonal grid parameters - reduced spacing for mobile
+  const HEX_WIDTH = isMobile ? 280 : 850
+  const HEX_HEIGHT = isMobile ? 243 : 736
   const HEX_COLS = 4
   const HEX_ROWS = 3
   
@@ -156,7 +167,12 @@ const Hero = () => {
     return tiles
   }
 
-  const [canvasCards] = useState(generateTiledPattern())
+  const [canvasCards, setCanvasCards] = useState(generateTiledPattern())
+
+  // Regenerate pattern when mobile state changes
+  useEffect(() => {
+    setCanvasCards(generateTiledPattern())
+  }, [isMobile])
 
   useEffect(() => {
     const container = containerRef.current
@@ -167,8 +183,8 @@ const Hero = () => {
     let mouseY = 0
     let currentX = 0
     let currentY = 0
-    const speed = 0.12 // Increased for more responsive, less laggy movement
-    const panMultiplier = 2500 // Slightly reduced for better control
+    const speed = 0.08 // Balanced, grounded movement
+    const panMultiplier = 1800 // Moderate panning
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = container.getBoundingClientRect()
@@ -225,14 +241,15 @@ const Hero = () => {
   }
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100"
+      className="relative w-full overflow-hidden"
+      style={{ height: '140vh', backgroundColor: 'rgba(239, 238, 236, 1)' }}
     >
-      <div className="relative z-50">
+      <div className="relative" style={{ zIndex: 9999 }}>
         <Header />
       </div>
-      <div 
+      <div
         ref={canvasRef}
         className="absolute"
         style={{
@@ -285,18 +302,18 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none px-4">
         <div className="text-center">
-          <h1 className="text-6xl md:text-7xl lg:text-9xl font-semibold text-gray-900 tracking-tighter">
-            We Create <span className="font-serif italic font-light">Marketing<br></br></span> Solutions
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-semibold text-stone-900 tracking-tighter">
+            Digital <span className="font-serif italic font-light">Growth<br></br></span> Solutions
           </h1>
-          
+
         </div>
       </div>
 
       {!isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-white z-50">
-          <div className="w-8 h-8 border-3 border-gray-300 border-t-gray-800 rounded-full animate-spin" />
+          <div className="w-8 h-8 border-3 border-stone-300 border-t-stone-800 rounded-full animate-spin" />
         </div>
       )}
     </div>

@@ -145,7 +145,7 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: rgba(239, 238, 236, 1);
   --foreground: #171717;
 }
 
@@ -157,12 +157,13 @@
   --font-serif: 'Apple Garamond', serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode disabled */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -187,4 +188,21 @@ body {
 .marquee-edge-blur {
   mask-image: linear-gradient(to right, transparent, black 12rem, black calc(100% - 12rem), transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 12rem, black calc(100% - 12rem), transparent);
+}
+
+/* Circle mask animation for project cards */
+.circle-mask-container {
+  position: relative;
+}
+
+.circle-mask {
+  clip-path: circle(0% at 50% 50%);
+  -webkit-clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.5s cubic-bezier(0.135, 0.9, 0.15, 1);
+}
+
+.circle-mask-container:hover .circle-mask,
+.circle-mask-container.is-active .circle-mask {
+  clip-path: circle(150% at 50% 50%);
+  -webkit-clip-path: circle(150% at 50% 50%);
 }

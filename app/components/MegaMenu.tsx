@@ -24,7 +24,7 @@ const AnimatedMenuLink = ({ href, children }: { href: string; children: React.Re
   return (
     <Link
       href={href}
-      className="text-gray-900 text-2xl font-semibold whitespace-nowrap tracking-tight block relative h-10 overflow-hidden"
+      className="text-gray-900 text-xl font-semibold whitespace-nowrap tracking-tight block relative h-7 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -193,7 +193,7 @@ const MegaMenu = () => {
           onMouseEnter={() => handleMouseEnter(key)}
           onMouseLeave={handleMouseLeave}
         >
-          <button className="px-5 py-2 text-lg text-gray-700 hover:text-gray-900 font-medium transition-all duration-200 rounded-full hover:bg-white/50 flex items-center gap-1">
+          <button className="px-5 py-2 text-lg text-stone-700 hover:text-stone-900 font-medium transition-all duration-200 rounded-full hover:bg-white/50 flex items-center gap-1">
             {key}
             <HiPlus className="text-xs" />
           </button>
@@ -211,7 +211,7 @@ const MegaMenu = () => {
               WebkitTransform: activeDropdown === key 
                 ? 'translateX(-50%) translateY(0)' 
                 : 'translateX(-50%) translateY(-12px)',
-              zIndex: 9999
+              zIndex: 10000
             }}
             onMouseEnter={() => handleMouseEnter(key)}
             onMouseLeave={handleMouseLeave}
@@ -227,8 +227,8 @@ const MegaMenu = () => {
                           onMouseEnter={() => setActiveServiceCategory(category)}
                           className={`text-lg font-medium transition-all duration-200 ${
                             activeServiceCategory === category
-                              ? "text-gray-900"
-                              : "text-gray-500 hover:text-gray-700"
+                              ? "text-stone-900"
+                              : "text-stone-500 hover:text-stone-700"
                           }`}
                         >
                           {category}
@@ -246,7 +246,7 @@ const MegaMenu = () => {
                                 : "opacity-0 absolute top-0 left-0 right-0 pointer-events-none"
                             }`}
                           >
-                          <div className="flex flex-col gap-y-0.5">
+                          <div className="flex flex-col -space-y-1">
                             {items.slice(0, 3).map((item, index) => (
                               <AnimatedMenuLink
                                 key={index}
@@ -256,7 +256,7 @@ const MegaMenu = () => {
                               </AnimatedMenuLink>
                             ))}
                           </div>
-                          <div className="flex flex-col gap-y-0.5">
+                          <div className="flex flex-col -space-y-1">
                             {items.slice(3).map((item, index) => (
                               <AnimatedMenuLink
                                 key={index}
@@ -273,9 +273,9 @@ const MegaMenu = () => {
                   </div>
                 ) : 'leftItems' in value ? (
                   <div className="flex flex-col">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">{value.title}</h3>
+                    <h3 className="text-base font-medium text-stone-900 mb-3">{value.title}</h3>
                     <div className="flex gap-x-12">
-                      <div className="flex flex-col gap-y-0.5">
+                      <div className="flex flex-col -space-y-1">
                         {value.leftItems.slice(0, 3).map((item, index) => (
                           <AnimatedMenuLink
                             key={index}
@@ -285,7 +285,7 @@ const MegaMenu = () => {
                           </AnimatedMenuLink>
                         ))}
                       </div>
-                      <div className="flex flex-col gap-y-0.5">
+                      <div className="flex flex-col -space-y-1">
                         {value.leftItems.slice(3).map((item, index) => (
                           <AnimatedMenuLink
                             key={index}
@@ -301,7 +301,7 @@ const MegaMenu = () => {
               </div>
 
               <div className="w-[340px] h-[340px] flex-shrink-0 ml-auto">
-                <div className="relative rounded-2xl overflow-hidden bg-gray-100 w-full h-full flex flex-col">
+                <div className="relative rounded-2xl overflow-hidden bg-stone-100 w-full h-full flex flex-col">
                   <div className="relative flex-1">
                     <Image
                       src={value.image}
@@ -313,7 +313,7 @@ const MegaMenu = () => {
                   </div>
                   <div className="absolute bottom-2 left-2">
                     <Link href={value.buttonLink}>
-                      <Button size="md" className="bg-black text-white hover:bg-gray-900">
+                      <Button size="md" className="bg-black text-white hover:bg-stone-900">
                         {value.buttonText}
                       </Button>
                     </Link>
@@ -329,7 +329,7 @@ const MegaMenu = () => {
         <Link
           key={link}
           href={`/${link.toLowerCase()}`}
-          className="px-5 py-2 text-lg text-gray-700 hover:text-gray-900 font-medium transition-all duration-200 rounded-full hover:bg-white/50"
+          className="px-5 py-2 text-lg text-stone-700 hover:text-stone-900 font-medium transition-all duration-200 rounded-full hover:bg-white/50"
         >
           {link}
         </Link>
