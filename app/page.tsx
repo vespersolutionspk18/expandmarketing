@@ -1,6 +1,6 @@
 
 import AboutUs from "./home/AboutUs";
-import Hero from "./home/Hero";
+import HeroUpdated from "./components/HeroUpdated";
 import OurServices from "./home/OurServices";
 
 import LeadChange from "./components/LeadChange";
@@ -15,10 +15,14 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-    <Hero />
-    <AboutUs />
+    <HeroUpdated
+      title="We Chase Consumers, Not Algorithms"
+    />
+    <div className="mt-[340px]">
+      <AboutUs />
+    </div>
     <OurServices />
-   
+
     <LeadChange text="Lead The Change" imageSrc="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop&q=90" />
     <OurProjects />
     <Blogs />
