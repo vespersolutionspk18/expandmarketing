@@ -4,11 +4,25 @@ import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { projectListings } from '../work/data'
+import { ProjectListingItem } from '../work/data/types'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// Map ProjectListingItem to local Project interface for component use
+const projects = projectListings.map((project) => ({
+  id: project.slug,
+  title: project.client,
+  year: '2024',
+  description: project.description,
+  category: project.category,
+  image: project.image,
+  color: project.color,
+  link: `/work/${project.slug}`
+}))
+
 interface Project {
-  id: number
+  id: string
   title: string
   year: string
   description: string
@@ -18,83 +32,10 @@ interface Project {
   link: string
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'TechStart Inc',
-    year: '2024',
-    description: '340% organic traffic increase through AI-powered SEO',
-    category: 'AI & SEO',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2000&q=80',
-    color: '#cb7b3a',
-    link: '/work/techstart'
-  },
-  {
-    id: 2,
-    title: 'RetailHub',
-    year: '2024',
-    description: 'Complete e-commerce redesign driving conversions',
-    category: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=2000&q=80',
-    color: '#d2b59d',
-    link: '/work/retailhub'
-  },
-  {
-    id: 3,
-    title: 'FinanceFlow',
-    year: '2024-2025',
-    description: 'CRM implementation reducing sales cycle by 45%',
-    category: 'CRM & Tools',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=2000&q=80',
-    color: '#39b0bd',
-    link: '/work/financeflow'
-  },
-  {
-    id: 4,
-    title: 'EcoLife',
-    year: '2024',
-    description: 'Social media campaign reaching 2.5M users',
-    category: 'Social Media',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=2000&q=80',
-    color: '#d29dd0',
-    link: '/work/ecolife'
-  },
-  {
-    id: 5,
-    title: 'HealthTech Pro',
-    year: '2023-2024',
-    description: 'Data analytics platform for predictive insights',
-    category: 'AI & Data',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=2000&q=80',
-    color: '#fecacc',
-    link: '/work/healthtech'
-  },
-  {
-    id: 6,
-    title: 'UrbanStyle',
-    year: '2024',
-    description: 'Brand identity refresh with modern UI/UX',
-    category: 'Brand & Design',
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=2000&q=80',
-    color: '#60dcfb',
-    link: '/work/urbanstyle'
-  },
-  {
-    id: 7,
-    title: 'CloudScale',
-    year: '2023-2024',
-    description: 'PPC campaigns delivering 5.2x ROAS',
-    category: 'PPC & Ads',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=2000&q=80',
-    color: '#fecacc',
-    link: '/work/cloudscale'
-  }
-]
-
 const ProjectCard = ({ project, isActive, onHover }: {
   project: Project
   isActive: boolean
-  onHover: (id: number | null) => void
+  onHover: (id: string | null) => void
 }) => {
   return (
     <a
@@ -106,25 +47,22 @@ const ProjectCard = ({ project, isActive, onHover }: {
       {/* Background Image */}
       <div className="col-start-1 row-start-1 transition md:group-hover:scale-105">
         <div className="relative overflow-hidden w-full" style={{ paddingTop: '75%' }}>
-          <picture>
-            <img
-              src={project.image}
-              alt={project.title}
-              className="absolute top-0 left-0 w-full h-full object-cover transition-opacity"
-              loading="lazy"
-              style={{ opacity: 0 }}
-              onLoad={(e) => (e.currentTarget.style.opacity = '1')}
-            />
-          </picture>
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </div>
 
       {/* Category Badge - Top Right */}
       <div className="col-start-1 row-start-1 p-2 sm:p-3 lg:items-end lg:p-5 z-30 flex justify-end items-start">
         <div className="shrink-0 inline-flex items-center rounded-full tracking-tight font-medium leading-none text-white bg-white/20 backdrop-blur-sm text-xs sm:text-sm gap-x-2 sm:gap-x-3 py-2 px-2.5 sm:py-2.5 sm:px-3.5 lg:text-base">
-          <i className="fa-regular fa-sharp fa-magnifying-glass"></i>
+          <i className="fa-regular fa-sharp fa-magnifying-glass" aria-hidden="true"></i>
           <div>{project.category}</div>
-          <i className="fa-regular fa-sharp fa-chart-line-up"></i>
+          <i className="fa-regular fa-sharp fa-chart-line-up" aria-hidden="true"></i>
         </div>
       </div>
 
@@ -154,9 +92,9 @@ const ProjectCard = ({ project, isActive, onHover }: {
         <div className="w-full flex items-end justify-between">
           <div className="w-8 lg:w-24"></div>
           <div className="shrink-0 inline-flex items-center rounded-full tracking-tight font-medium leading-none text-current bg-white/15 backdrop-blur-sm text-sm gap-x-3 py-2.5 px-3.5 lg:text-base">
-            <i className="fa-regular fa-sharp fa-magnifying-glass"></i>
+            <i className="fa-regular fa-sharp fa-magnifying-glass" aria-hidden="true"></i>
             <div>{project.category}</div>
-            <i className="fa-regular fa-sharp fa-chart-line-up"></i>
+            <i className="fa-regular fa-sharp fa-chart-line-up" aria-hidden="true"></i>
           </div>
         </div>
       </div>
@@ -165,7 +103,7 @@ const ProjectCard = ({ project, isActive, onHover }: {
 }
 
 const OurProjects = () => {
-  const [activeProject, setActiveProject] = useState<number | null>(null)
+  const [activeProject, setActiveProject] = useState<string | null>(null)
   const [hovering, setHovering] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const triggerRef = useRef<HTMLDivElement>(null)
@@ -265,7 +203,7 @@ const OurProjects = () => {
     }
   }, [])
 
-  const handleProjectHover = (id: number | null) => {
+  const handleProjectHover = (id: string | null) => {
     setActiveProject(id)
     setHovering(id !== null)
   }

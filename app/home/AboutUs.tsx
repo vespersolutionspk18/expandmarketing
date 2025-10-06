@@ -95,16 +95,16 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-10 justify-between">
           <div className="text-lg sm:text-xl md:text-2xl font-semibold w-full md:w-[40%] tracking-tighter leading-tight text-white">
-              Transforming businesses through Digital Marketing, Web Design, AI Solutions, and CRM tools that drive measurable growth.
+              Award-winning search-first content marketing agency creating category leaders through innovative SEO and digital strategies.
           </div>
           <div className="hidden md:block md:w-[10%]">
 
           </div>
           <div className="w-full md:w-[50%] flex flex-col gap-5">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans text-white tracking-tighter">Marketing That Delivers Results <Image alt="" src={"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=48&h=48&fit=crop"} width={40} height={40} className="md:w-[56px] md:h-[56px] rounded-md inline-block align-middle"/></div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans text-white tracking-tighter">Agile, Creative, Performance-Led <Image alt="Growth icon" src={"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop"} width={40} height={40} className="md:w-[56px] md:h-[56px] rounded-md inline-block align-middle"/></div>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-5">
-                  <Button variant="secondary" className="w-full sm:w-auto">About Us</Button>
-                   <Button variant="primary" className="w-full sm:w-auto">How We Work</Button>
+                  <Button href="/about" variant="secondary" className="w-full sm:w-auto">About Us</Button>
+                   <Button href="/services" variant="primary" className="w-full sm:w-auto">How We Work</Button>
 
               </div>
           </div>

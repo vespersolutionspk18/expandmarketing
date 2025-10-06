@@ -11,24 +11,24 @@ interface FooterLink {
 
 const Footer = () => {
   const column1: FooterLink[] = [
-    { label: 'Digital Marketing', href: '/services#digital-marketing' },
-    { label: 'Web Design', href: '/services#web-design' },
-    { label: 'AI & Data', href: '/services#ai-data' },
-    { label: 'CRM & Tools', href: '/services#crm-tools' }
+    { label: 'Search & Growth Strategy', href: '/services/strategy-growth' },
+    { label: 'Onsite SEO', href: '/services/onsite-seo' },
+    { label: 'Content Experience', href: '/services/content-experience' },
+    { label: 'Digital PR', href: '/services/digital-pr' }
   ]
 
   const column2: FooterLink[] = [
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Careers', href: '/careers' }
+    { label: 'Social Video SEO', href: '/services/social-video-seo' },
+    { label: 'Web Development', href: '/services/web-development' },
+    { label: 'AI Automation', href: '/services/ai-automation' },
+    { label: 'CRM Consultancy', href: '/services/crm-consultancy' }
   ]
 
   const column3: FooterLink[] = [
-    { label: 'Contact Us', href: '/contact' },
-    { label: 'Get a Quote', href: '/quote' },
-    { label: 'Support', href: '/support' },
-    { label: 'Resources', href: '/resources' }
+    { label: 'About Us', href: '/about' },
+    { label: 'Our Work', href: '/work' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' }
   ]
 
   const socialLinks = [
@@ -200,13 +200,13 @@ const Footer = () => {
 
                 <div className="w-1 h-1 rounded-full bg-white inline-flex md:mt-0.5 md:last:hidden"></div>
 
-                <a href="/privacy-policy" className="text-white font-light leading-tight text-[0.675rem] md:text-xs link">
+                <a href="/contact" className="text-white font-light leading-tight text-[0.675rem] md:text-xs link">
                   Privacy Policy
                 </a>
 
                 <div className="w-1 h-1 rounded-full bg-white inline-flex md:mt-0.5 md:last:hidden"></div>
 
-                <a href="/terms-conditions" className="text-white font-light leading-tight text-[0.675rem] md:text-xs link">
+                <a href="/contact" className="text-white font-light leading-tight text-[0.675rem] md:text-xs link">
                   Terms &amp; conditions
                 </a>
 

@@ -3,63 +3,13 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from '../components/Button'
+import { blogListings } from '../blog/data'
+import { BlogListingItem } from '../blog/data/types'
 
-interface BlogPost {
-  id: number
-  title: string
-  category: string
-  author: {
-    name: string
-    avatar: string
-  }
-  readTime: string
-  image: string
-  link: string
-}
-
-const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: 'How AI is Transforming SEO Strategies',
-    category: 'AI & SEO',
-    author: {
-      name: 'Sarah Chen',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop'
-    },
-    readTime: '6 mins',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    link: '/blog/ai-seo-strategies'
-  },
-  {
-    id: 2,
-    title: 'Web Design Trends Driving Conversions',
-    category: 'Web Design',
-    author: {
-      name: 'Michael Torres',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop'
-    },
-    readTime: '5 mins',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80',
-    link: '/blog/web-design-trends'
-  },
-  {
-    id: 3,
-    title: 'Maximizing ROI with CRM Automation',
-    category: 'CRM & Tools',
-    author: {
-      name: 'Jennifer Park',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
-    },
-    readTime: '7 mins',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
-    link: '/blog/crm-automation-roi'
-  }
-]
-
-const BlogCard = ({ post }: { post: BlogPost }) => {
+const BlogCard = ({ post }: { post: BlogListingItem }) => {
   return (
     <a
-      href={post.link}
+      href={`/blog/${post.slug}`}
       className="w-full flex flex-col items-start gap-y-5 transition-transform duration-300 ease-out md:hover:-translate-y-1 circle-mask-container"
     >
       <div className="w-full grid">
@@ -122,7 +72,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
 
           {/* Read Time Badge */}
           <div className="inline-flex items-center font-medium tracking-tight leading-none rounded-full text-sm gap-x-2 px-3 py-1 min-h-7 xl:min-h-8 xl:py-1.5 xl:text-base text-[#6a6a6a] bg-white">
-            <i className="fa-sharp fa-regular fa-stopwatch"></i>
+            <i className="fa-sharp fa-regular fa-stopwatch" aria-hidden="true"></i>
             <div>{post.readTime}</div>
           </div>
         </div>
@@ -155,7 +105,7 @@ const Blogs = () => {
                     {/* Embedded square image */}
                     <div className="inline shrink-0 flex bg-black/10 relative overflow-hidden bg-black/5 rounded-md mx-2 md:mx-2">
                       <Image
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=200&h=200&fit=crop"
+                        src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
                         alt="What's New"
                         width={40}
                         height={40}
@@ -181,8 +131,8 @@ const Blogs = () => {
           <div className="col-span-12 lg:px-7">
             <div className="w-full">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-4 lg:px-0">
-                {blogPosts.map((post) => (
-                  <div key={post.id} className="py-2">
+                {blogListings.slice(0, 3).map((post) => (
+                  <div key={post.slug} className="py-2">
                     <BlogCard post={post} />
                   </div>
                 ))}

@@ -42,24 +42,21 @@ const Header = memo(() => {
         { label: "Onsite SEO", href: "/services/onsite-seo" },
         { label: "Content Experience", href: "/services/content-experience" },
         { label: "Digital PR", href: "/services/digital-pr" },
-        { label: "Social & Social Search", href: "/services/social" },
+        { label: "Social Video SEO", href: "/services/social-video-seo" },
         { label: "Data & Insights", href: "/services/data-insights" },
+        { label: "Web Development", href: "/services/web-development" },
+        { label: "AI Automation", href: "/services/ai-automation" },
+        { label: "CRM Consultancy", href: "/services/crm-consultancy" },
+        { label: "Social & Social Search", href: "/services/social" },
       ]
     },
     {
       label: "About",
       href: "/about",
-      hasSubmenu: true,
-      submenuId: "103",
-      submenuItems: [
-        { label: "About Us", href: "/about" },
-        { label: "Meet The Team", href: "/about/team" },
-        { label: "Culture", href: "/about/culture" },
-        { label: "Testimonials", href: "/about/testimonials" },
-      ]
+      hasSubmenu: false
     },
     { label: "Work", href: "/work", hasSubmenu: false },
-    { label: "Careers", href: "/careers", hasSubmenu: false },
+    { label: "Careers", href: "/career", hasSubmenu: false },
     { label: "Blog", href: "/blog", hasSubmenu: false },
   ];
 
@@ -96,7 +93,7 @@ const Header = memo(() => {
   return (
     <>
       {/* Header Wrapper */}
-      <div className="w-full absolute top-0 left-0 z-50 flex transition h-[4.5rem] lg:h-[5.5rem] lg:p-3">
+      <div className="w-full relative flex transition h-[4.5rem] lg:h-[5.5rem] lg:p-3" style={{ zIndex: 9999 }}>
         <div
           className={`w-full flex items-center justify-between relative z-20 px-4 transition lg:px-3 lg:rounded-full ${
             !hideHeaderBackground ? 'bg-white/60 backdrop-blur-lg' : ''
@@ -128,15 +125,9 @@ const Header = memo(() => {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center bg-white text-black rounded-full px-6 py-3 font-medium text-base tracking-tight leading-none transition hover:bg-gray-100"
-            >
-              <div className="flex items-center gap-x-2">
-                <span>Get in touch</span>
-                <span className="inline-block align-middle text-xs mt-1">↗</span>
-              </div>
-            </Link>
+            <Button href="/contact" variant="secondary">
+              Get in touch
+            </Button>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -200,9 +191,10 @@ const Header = memo(() => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`w-full h-svh fixed top-0 left-0 z-50 opacity-0 pointer-events-none transition p-2 backdrop-blur-sm duration-1000 lg:hidden ${
+        className={`w-full h-svh fixed top-0 left-0 opacity-0 pointer-events-none transition p-2 backdrop-blur-sm duration-1000 lg:hidden ${
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''
         }`}
+        style={{ zIndex: 10001 }}
       >
         <div className="w-full h-full bg-gray-900/80 rounded-3xl px-4 py-2.5 flex flex-col items-start justify-between">
 
@@ -320,16 +312,14 @@ const Header = memo(() => {
 
           {/* CTA Button at bottom */}
           <div className="w-full">
-            <Link
+            <Button
               href="/contact"
-              className="inline-flex items-center justify-center w-full text-center bg-white text-black rounded-full px-6 py-4 font-medium text-base tracking-tight leading-none transition hover:bg-gray-100"
+              variant="secondary"
               onClick={() => setMobileMenuOpen(false)}
+              className="w-full"
             >
-              <div className="flex items-center gap-x-2">
-                <span>Get in touch</span>
-                <span className="inline-block align-middle text-xs mt-1">↗</span>
-              </div>
-            </Link>
+              Get in touch
+            </Button>
           </div>
         </div>
       </div>

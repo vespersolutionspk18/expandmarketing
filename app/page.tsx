@@ -19,7 +19,7 @@ export default function Home() {
     <AboutUs />
     <OurServices />
    
-    <LeadChange text="Lead The Change" imageSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=600&fit=crop&q=90" />
+    <LeadChange text="Lead The Change" imageSrc="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop&q=90" />
     <OurProjects />
     <Blogs />
     <ExpandReady />

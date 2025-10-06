@@ -153,8 +153,38 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: 'Athletics', sans-serif;
+  --font-sans-primary: 'Athletics', sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-serif: 'Apple Garamond', serif;
+
+  /* Brand Colors */
+  --color-grey-900: #111212;
+  --color-grey-800: #121212;
+  --color-grey-600: #1a1a1a;
+  --color-grey-500: #1f1f1f;
+  --color-grey-400: #282828;
+  --color-grey-300: #6a6a6a;
+  --color-grey-200: #bebebe;
+  --color-grey-150: #e9e9e9;
+  --color-grey-100: #efeeec;
+  --color-grey-50: #f7f7f7;
+  --color-mint: #b2f6e3;
+
+  /* Custom Utilities */
+  --tracking-tightish: -0.02em;
+  --blur-xs: blur(4px);
+  --ease-smooth: cubic-bezier(0.135, 0.9, 0.15, 1);
+
+  /* Custom text sizes */
+  --font-size-7xl: 4.6875rem; /* 75px */
+  --font-size-7\.5xl: 5.625rem; /* 90px */
+  --font-size-8xl: 6.25rem; /* 100px */
+  --font-size-8\.5xl: 7.5rem; /* 120px */
+  --font-size-10xl: 13.75rem; /* 220px */
+  --text-10xl: 13.75rem;
+
+  /* Custom aspect ratios */
+  --aspect-4-3: 4 / 3;
 }
 
 /* Dark mode disabled */
@@ -169,6 +199,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Athletics', sans-serif;
+  overflow-x: hidden;
   @apply tracking-tight;
 }
 
@@ -183,6 +214,19 @@ body {
 
 .animate-marquee {
   animation: marquee 15s linear infinite;
+}
+
+@keyframes grow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-grow {
+  animation: grow 10s linear forwards;
 }
 
 .marquee-edge-blur {
@@ -205,4 +249,214 @@ body {
 .circle-mask-container.is-active .circle-mask {
   clip-path: circle(150% at 50% 50%);
   -webkit-clip-path: circle(150% at 50% 50%);
+}
+
+/* Pointer Fine Media Query Utilities */
+@media (pointer: fine) {
+  .pointer-fine\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
+  .pointer-fine\:w-\[120vw\] {
+    width: 120vw;
+  }
+
+  .pointer-fine\:block {
+    display: block;
+  }
+
+  .pointer-fine\:hidden {
+    display: none;
+  }
+
+  .pointer-fine\:pr-1 {
+    padding-right: 0.25rem;
+  }
+
+  .pointer-fine\:pb-2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .pointer-fine\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .pointer-fine\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .pointer-fine\:-mt-6 {
+    margin-top: -1.5rem;
+  }
+
+  .pointer-fine\:-mb-3 {
+    margin-bottom: -0.75rem;
+  }
+
+  .pointer-fine\:mr-0 {
+    margin-right: 0;
+  }
+
+  .pointer-fine\:overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+/* Aspect Ratio Utilities */
+.aspect-4\/3 {
+  aspect-ratio: 4 / 3;
+}
+
+/* Custom text size utilities */
+.text-7\.5xl {
+  font-size: 5.625rem; /* 90px */
+}
+
+.text-8\.5xl {
+  font-size: 7.5rem; /* 120px */
+}
+
+.text-9\.5xl {
+  font-size: 10rem; /* 160px */
+}
+
+.text-7xl\/0\.9 {
+  font-size: 4.6875rem;
+  line-height: 0.9;
+}
+
+.text-8xl\/0\.9 {
+  font-size: 6.25rem;
+  line-height: 0.9;
+}
+
+.text-10xl\/0\.9 {
+  font-size: var(--text-10xl);
+  line-height: 0.9;
+}
+
+@media (min-width: 768px) {
+  .md\:text-7xl\/0\.9 {
+    font-size: 4.6875rem;
+    line-height: 0.9;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-8xl\/0\.9 {
+    font-size: 6.25rem;
+    line-height: 0.9;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-10xl\/0\.9 {
+    font-size: 13.75rem;
+    line-height: 0.9;
+  }
+
+  .xl\:text-2xl\/none {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .xl\:text-3xl\/none {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
+}
+
+.text-lg\/tight {
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.md\:text-xl\/tight {
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 2560px) {
+  .4xl\:text-4xl\/none {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+
+  .4xl\:max-w-lg {
+    max-width: 32rem;
+  }
+}
+
+/* Responsive breakpoint utilities */
+@media (min-width: 1920px) {
+  .3xl\:text-\[5rem\]\/\[0\.9\] {
+    font-size: 5rem;
+    line-height: 0.9;
+  }
+
+  .3xl\:text-7xl\/\[0\.9\] {
+    font-size: 4.5rem;
+    line-height: 0.9;
+  }
+
+  .3xl\:h-\[22vw\] {
+    height: 22vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  .4xl\:text-8xl\/\[0\.9\] {
+    font-size: 6rem;
+    line-height: 0.9;
+  }
+
+  .4xl\:text-4xl\/none {
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+
+  .4xl\:text-2xl\/none {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+
+/* Grid 20 columns utility */
+.grid-cols-20 {
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+}
+
+/* Screen height fix utilities */
+.h-screen-fix {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* SVG height utilities */
+.h-svh {
+  height: 100svh;
+}
+
+/* Transition timing utilities */
+.ease-smooth {
+  transition-timing-function: var(--ease-smooth);
+}
+
+/* Transition rounded utility */
+.transition-rounded {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, translate, scale, rotate, filter, backdrop-filter, border-radius;
+  transition-timing-function: cubic-bezier(0.135, 0.9, 0.15, 1);
+  transition-duration: 0.6s;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }

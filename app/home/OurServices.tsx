@@ -14,63 +14,53 @@ interface Service {
 const services: Service[] = [
   {
     title: 'Search & Growth Strategy',
-    href: '/services/search-&-growth-strategy',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2000&q=80'
-  },
-  {
-    title: 'UI/UX Design',
-    href: '/services/ui/ux-design',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=2000&q=80'
+    href: '/services/strategy-growth',
+    image: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
     title: 'Onsite SEO',
     href: '/services/onsite-seo',
-    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=2000&q=80'
-  },
-  {
-    title: 'AI SEO',
-    href: '/services/ai-seo',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=2000&q=80'
+    image: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
     title: 'Content Experience',
     href: '/services/content-experience',
-    image: 'https://images.unsplash.com/photo-1493612276216-ee3925520721?w=2000&q=80'
+    image: 'https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
-    title: 'Responsive Web Design',
-    href: '/services/responsive-web-design',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=2000&q=80'
+    title: 'Digital PR',
+    href: '/services/digital-pr',
+    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
-    title: 'PPC & AdWords',
-    href: '/services/ppc-&-adwords',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=2000&q=80'
+    title: 'Social Media & Campaigns',
+    href: '/services/social',
+    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
-    title: 'Data Analytics',
-    href: '/services/data-analytics',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=2000&q=80'
+    title: 'Data & Insights',
+    href: '/services/data-insights',
+    image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
-    title: 'Social Media Marketing',
-    href: '/services/social-media-marketing',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=2000&q=80'
+    title: 'Social Video SEO',
+    href: '/services/social-video-seo',
+    image: 'https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
-    title: 'Brand Identity',
-    href: '/services/brand-identity',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=2000&q=80'
-  },
-  {
-    title: 'CRM Implementation',
-    href: '/services/crm-implementation',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=2000&q=80'
+    title: 'Web Development',
+    href: '/services/web-development',
+    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   },
   {
     title: 'AI Automation',
     href: '/services/ai-automation',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=2000&q=80'
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
+  },
+  {
+    title: 'CRM Consultancy',
+    href: '/services/crm-consultancy',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
   }
 ]
 
@@ -166,7 +156,7 @@ const OurServices = () => {
                       <div className="w-full h-full relative">
                         <picture>
                           <img
-                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=200&h=200&fit=crop"
+                            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
                             alt="Services"
                             className="w-full h-full object-cover object-center absolute inset-0"
                           />

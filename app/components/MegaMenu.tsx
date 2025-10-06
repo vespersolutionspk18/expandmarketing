@@ -77,38 +77,34 @@ const MegaMenu = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { setIsOverlayActive } = useMegaMenu();
 
+  // Map service names to correct slugs
+  const serviceSlugMap: Record<string, string> = {
+    "Search & Growth Strategy": "strategy-growth",
+    "Onsite SEO": "onsite-seo",
+    "Content Experience": "content-experience",
+    "Digital PR": "digital-pr",
+    "Social Video SEO": "social-video-seo",
+    "Data & Insights": "data-insights",
+    "Web Development": "web-development",
+    "AI Automation": "ai-automation",
+    "CRM Consultancy": "crm-consultancy",
+    "Social & Social Search": "social"
+  };
+
   const serviceCategories = {
     "Digital Marketing": [
       "Search & Growth Strategy",
       "Onsite SEO",
       "Content Experience",
-      "PPC & AdWords",
-      "YouTube Ads",
-      "Social Media Marketing"
+      "Digital PR",
+      "Social Video SEO",
+      "Social & Social Search"
     ],
     "Web Design": [
-      "UI/UX Design",
-      "Responsive Web Design",
-      "E-commerce Design",
-      "Landing Page Design",
-      "Brand Identity",
-      "Design Systems"
-    ],
-    "AI & Data": [
-      "AI SEO",
-      "Machine Learning Solutions",
-      "Data Analytics",
-      "Business Intelligence",
-      "Predictive Analytics",
-      "AI Automation"
-    ],
-    "CRM & Tools": [
-      "CRM Implementation",
-      "Marketing Automation",
-      "Sales Pipeline Management",
-      "Customer Data Platform",
-      "Integration Services",
-      "Custom Workflows"
+      "Web Development",
+      "AI Automation",
+      "CRM Consultancy",
+      "Data & Insights"
     ]
   };
 
@@ -117,27 +113,18 @@ const MegaMenu = () => {
       title: "Core Services",
       categories: serviceCategories,
       activeCategory: activeServiceCategory,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
+      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       buttonText: "View All Services",
       buttonLink: "/services"
     } as ServiceMenuItem,
-    About: {
-      title: "About Us",
-      leftItems: [
-        "Our Story",
-        "Mission & Vision",
-        "Our Team",
-        "Company Culture",
-        "Awards & Recognition",
-        "Client Success Stories"
-      ],
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
-      buttonText: "Learn More About Us",
-      buttonLink: "/about"
-    } as AboutMenuItem,
   };
 
-  const simpleLinks = ["Portfolio", "Careers"];
+  const simpleLinks = [
+    { label: "About", href: "/about" },
+    { label: "Work", href: "/work" },
+    { label: "Blog", href: "/blog" },
+    { label: "Careers", href: "/career" }
+  ];
 
   useEffect(() => {
     if (activeDropdown) {
@@ -172,7 +159,7 @@ const MegaMenu = () => {
 
   useEffect(() => {
     // Update overlay state when dropdown changes
-    const shouldShowOverlay = activeDropdown === "Services" || activeDropdown === "About";
+    const shouldShowOverlay = activeDropdown === "Services";
     setIsOverlayActive(shouldShowOverlay);
   }, [activeDropdown, setIsOverlayActive]);
 
@@ -250,7 +237,7 @@ const MegaMenu = () => {
                             {items.slice(0, 3).map((item, index) => (
                               <AnimatedMenuLink
                                 key={index}
-                                href={`/services/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                                href={`/services/${serviceSlugMap[item] || item.toLowerCase().replace(/\s+/g, '-')}`}
                               >
                                 {item}
                               </AnimatedMenuLink>
@@ -260,7 +247,7 @@ const MegaMenu = () => {
                             {items.slice(3).map((item, index) => (
                               <AnimatedMenuLink
                                 key={index}
-                                href={`/services/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                                href={`/services/${serviceSlugMap[item] || item.toLowerCase().replace(/\s+/g, '-')}`}
                               >
                                 {item}
                               </AnimatedMenuLink>
@@ -269,32 +256,6 @@ const MegaMenu = () => {
                         </div>
                         );
                       })}
-                    </div>
-                  </div>
-                ) : 'leftItems' in value ? (
-                  <div className="flex flex-col">
-                    <h3 className="text-base font-medium text-stone-900 mb-3">{value.title}</h3>
-                    <div className="flex gap-x-12">
-                      <div className="flex flex-col -space-y-1">
-                        {value.leftItems.slice(0, 3).map((item, index) => (
-                          <AnimatedMenuLink
-                            key={index}
-                            href={`/${key.toLowerCase()}/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                          >
-                            {item}
-                          </AnimatedMenuLink>
-                        ))}
-                      </div>
-                      <div className="flex flex-col -space-y-1">
-                        {value.leftItems.slice(3).map((item, index) => (
-                          <AnimatedMenuLink
-                            key={index}
-                            href={`/${key.toLowerCase()}/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                          >
-                            {item}
-                          </AnimatedMenuLink>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 ) : null}
@@ -327,11 +288,11 @@ const MegaMenu = () => {
       
       {simpleLinks.map((link) => (
         <Link
-          key={link}
-          href={`/${link.toLowerCase()}`}
+          key={link.label}
+          href={link.href}
           className="px-5 py-2 text-lg text-stone-700 hover:text-stone-900 font-medium transition-all duration-200 rounded-full hover:bg-white/50"
         >
-          {link}
+          {link.label}
         </Link>
       ))}
     </nav>

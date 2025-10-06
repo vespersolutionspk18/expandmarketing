@@ -51,31 +51,31 @@ const Hero = () => {
       id: 'base-1',
       ...getHexPosition(0, 0),
       width: '18vw',
-      src: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=450&fit=crop',
-      route: '/projects',
+      src: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/work',
       zIndex: 3
     },
     {
       id: 'base-2',
       ...getHexPosition(1, 0),
       width: '20vw',
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=450&fit=crop',
-      route: '/agency',
+      src: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/about',
       zIndex: 2
     },
     {
       id: 'base-3',
       ...getHexPosition(2, 0),
       width: '16vw',
-      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=450&fit=crop',
-      route: '/journal',
+      src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/blog',
       zIndex: 4
     },
     {
       id: 'base-4',
       ...getHexPosition(3, 0),
       width: '19vw',
-      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=450&fit=crop',
+      src: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
       route: '/contact',
       zIndex: 1
     },
@@ -83,7 +83,7 @@ const Hero = () => {
       id: 'base-5',
       ...getHexPosition(0, 1),
       width: '17vw',
-      src: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=450&fit=crop',
+      src: 'https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
       route: '/about',
       zIndex: 2
     },
@@ -91,7 +91,7 @@ const Hero = () => {
       id: 'base-6',
       ...getHexPosition(1, 1),
       width: '21vw',
-      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=450&fit=crop',
+      src: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
       route: '/work',
       zIndex: 3
     },
@@ -99,7 +99,7 @@ const Hero = () => {
       id: 'base-7',
       ...getHexPosition(2, 1),
       width: '18vw',
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=450&fit=crop',
+      src: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
       route: '/services',
       zIndex: 4
     },
@@ -107,15 +107,15 @@ const Hero = () => {
       id: 'base-8',
       ...getHexPosition(3, 1),
       width: '16vw',
-      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=450&fit=crop',
-      route: '/team',
+      src: 'https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/career',
       zIndex: 1
     },
     {
       id: 'base-9',
       ...getHexPosition(0, 2),
       width: '19vw',
-      src: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=450&fit=crop',
+      src: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
       route: '/blog',
       zIndex: 3
     },
@@ -123,24 +123,24 @@ const Hero = () => {
       id: 'base-10',
       ...getHexPosition(1, 2),
       width: '17vw',
-      src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=450&fit=crop',
-      route: '/portfolio',
+      src: 'https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/work',
       zIndex: 2
     },
     {
       id: 'base-11',
       ...getHexPosition(2, 2),
       width: '20vw',
-      src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=450&fit=crop',
-      route: '/careers',
+      src: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/career',
       zIndex: 4
     },
     {
       id: 'base-12',
       ...getHexPosition(3, 2),
       width: '18vw',
-      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop',
-      route: '/resources',
+      src: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+      route: '/services',
       zIndex: 1
     }
   ]
@@ -305,7 +305,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center z-10 pointer-events-none px-4">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-semibold text-stone-900 tracking-tighter">
-            Digital <span className="font-serif italic font-light">Growth<br></br></span> Solutions
+            We Chase <span className="font-serif italic font-light">Consumers,<br></br></span> Not Algorithms
           </h1>
 
         </div>
