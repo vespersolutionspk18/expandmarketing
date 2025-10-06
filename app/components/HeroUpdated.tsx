@@ -264,6 +264,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
+                <h2 className="text-lg md:text-3xl text-black font-medium tracking-tighter"></h2>
               </div>
             </div>
 
@@ -272,7 +273,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
               className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
                 activeMobile ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '70vw' }}
+              style={{ height: '85vw' }}
             >
               <div
                 ref={mobileContainerRef}
@@ -317,7 +318,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
               className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
                 activeTablet ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '65vw' }}
+              style={{ height: '80vw' }}
             >
               <div
                 ref={tabletContainerRef}
@@ -362,7 +363,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
               className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
                 activeDesktop ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '35vw' }}
+              style={{ height: '45vw' }}
             >
               <div
                 ref={desktopContainerRef}

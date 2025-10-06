@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
     <HeroUpdated
-      title="Ready to expand your business? Let&apos;s make it happen"
+      title="Ready to expand your reach?"
     />
     <div className="mt-[340px]">
       <AboutUs />
