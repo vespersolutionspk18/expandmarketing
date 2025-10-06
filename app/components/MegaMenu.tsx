@@ -123,7 +123,7 @@ const MegaMenu = () => {
     { label: "About", href: "/about" },
     { label: "Work", href: "/work" },
     { label: "Blog", href: "/blog" },
-    { label: "Careers", href: "/career" }
+    { label: "Careers", href: "/careers" }
   ];
 
   useEffect(() => {

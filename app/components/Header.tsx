@@ -56,7 +56,7 @@ const Header = memo(() => {
       hasSubmenu: false
     },
     { label: "Work", href: "/work", hasSubmenu: false },
-    { label: "Careers", href: "/career", hasSubmenu: false },
+    { label: "Careers", href: "/careers", hasSubmenu: false },
     { label: "Blog", href: "/blog", hasSubmenu: false },
   ];
 

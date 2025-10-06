@@ -40,7 +40,7 @@ const ContactHero = () => {
                 </h2>
 
                 {/* Button */}
-                <Button href="/career" variant="secondary" className="w-full md:w-auto">
+                <Button href="/careers" variant="secondary" className="w-full md:w-auto">
                   Careers
                 </Button>
               </div>
