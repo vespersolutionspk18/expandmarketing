@@ -228,7 +228,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
         key={index}
         data-arched-image={`${id}`}
         data-index={index}
-        className={`absolute top-0 left-1/2 h-1/2 origin-bottom-left ${widthClass}`}
+        className={`absolute overflow-hidden top-0 left-1/2 h-1/2 origin-bottom-left ${widthClass}`}
       >
         <div
           className="relative overflow-hidden w-full"
@@ -246,18 +246,18 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
   }
 
   return (
-    <div className="relative w-full bg-grey-100 mb-32 lg:mb-48">
+    <div className="relative w-full bg-grey-100 mb-32 lg:mb-48 overflow-hidden">
       {/* Header */}
       <div className="relative" style={{ zIndex: 9999 }}>
         <Header />
       </div>
 
       {/* Mobile Version - w-full md:hidden */}
-      <div className="w-full md:hidden">
+      <div className="w-full md:hidden overflow-hidden">
         <div
-          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10"
+          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 overflow-hidden"
         >
-          <div className="px-0">
+          <div className="px-0 overflow-hidden">
             {/* Title */}
             <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-8 lg:mb-12">
               <div className="px-2 lg:px-3 xl:px-4">
@@ -269,10 +269,10 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
 
             {/* Carousel */}
             <div
-              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 ${
+              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
                 activeMobile ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '70vw', overflow: 'visible' }}
+              style={{ height: '70vw' }}
             >
               <div
                 ref={mobileContainerRef}
@@ -293,16 +293,16 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
       </div>
 
       {/* Tablet Version - w-full hidden md:block xl:hidden */}
-      <div className="w-full hidden md:block xl:hidden">
+      <div className="w-full hidden md:block xl:hidden overflow-hidden">
         <div
-          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10"
+          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 overflow-hidden"
           style={{
             height: '80vh',
             minHeight: '640px',
             maxHeight: '720px'
           }}
         >
-          <div className="px-0">
+          <div className="px-0 overflow-hidden">
             {/* Title */}
             <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-8 lg:mb-12">
               <div className="px-2 lg:px-3 xl:px-4">
@@ -314,10 +314,10 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
 
             {/* Carousel */}
             <div
-              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 ${
+              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
                 activeTablet ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '65vw', overflow: 'visible' }}
+              style={{ height: '65vw' }}
             >
               <div
                 ref={tabletContainerRef}
@@ -338,16 +338,16 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
       </div>
 
       {/* Desktop Version - w-full hidden xl:block */}
-      <div className="w-full hidden xl:block">
+      <div className="w-full hidden xl:block overflow-hidden">
         <div
-          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 3xl:mt-0"
+          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 3xl:mt-0 overflow-hidden"
           style={{
             height: '90vh',
             minHeight: '760px',
             maxHeight: '1000px'
           }}
         >
-          <div className="px-0">
+          <div className="px-0 overflow-hidden">
             {/* Title */}
             <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-8 lg:mb-12">
               <div className="px-2 lg:px-3 xl:px-4">
@@ -359,10 +359,10 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
 
             {/* Carousel */}
             <div
-              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 ${
+              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
                 activeDesktop ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '35vw', overflow: 'visible' }}
+              style={{ height: '35vw' }}
             >
               <div
                 ref={desktopContainerRef}
