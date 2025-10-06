@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
     <HeroUpdated
-      title="We Chase Consumers, Not Algorithms"
+      title="Ready to expand your business? Let&apos;s make it happen"
     />
     <div className="mt-[340px]">
       <AboutUs />
