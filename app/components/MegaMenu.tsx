@@ -203,7 +203,7 @@ const MegaMenu = () => {
             onMouseEnter={() => handleMouseEnter(key)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="bg-white rounded-3xl shadow-2xl p-3 pl-16 pr-3 flex items-center transition-all duration-300 ease-in-out" style={{ width: `${menuWidth}px`, height: '360px' }}>
+            <div className="bg-white rounded-3xl shadow-2xl p-3 pl-16 pr-3 flex items-center transition-all duration-300 ease-in-out" style={{ width: `${menuWidth}px`, maxWidth: '80vw', height: '360px' }}>
               <div ref={contentRef} className="flex items-center justify-center h-full" style={{ marginRight: "60px" }}>
                 {key === "Services" && 'categories' in value ? (
                   <div className="flex flex-col">

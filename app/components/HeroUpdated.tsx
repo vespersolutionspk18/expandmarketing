@@ -259,21 +259,21 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
         >
           <div className="px-0 overflow-hidden">
             {/* Title */}
-            <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-8 lg:mb-12">
-              <div className="px-2 lg:px-3 xl:px-4">
+            <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-16 lg:mb-24">
+              <div className="px-2 lg:px-3 xl:px-4 flex flex-col items-center">
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="text-lg md:text-3xl text-black font-medium tracking-tighter"></h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Smart SEO, strategic marketing, and purposeful design — all built to expand your reach and results</h2>
               </div>
             </div>
 
             {/* Carousel */}
             <div
-              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
+              className={`w-full pt-0 relative pointer-events-none transition-opacity pb-24 overflow-hidden z-10 ${
                 activeMobile ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '85vw' }}
+              style={{ height: '110vw' }}
             >
               <div
                 ref={mobileContainerRef}
@@ -305,20 +305,21 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
         >
           <div className="px-0 overflow-hidden">
             {/* Title */}
-            <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-8 lg:mb-12">
-              <div className="px-2 lg:px-3 xl:px-4">
+            <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-16 lg:mb-24">
+              <div className="px-2 lg:px-3 xl:px-4 flex flex-col items-center">
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Smart SEO, strategic marketing, and purposeful design — all built to expand your reach and results</h2>
               </div>
             </div>
 
             {/* Carousel */}
             <div
-              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
+              className={`w-full pt-0 relative pointer-events-none transition-opacity pb-24 overflow-hidden z-10 ${
                 activeTablet ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '80vw' }}
+              style={{ height: '104vw' }}
             >
               <div
                 ref={tabletContainerRef}
@@ -350,20 +351,21 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
         >
           <div className="px-0 overflow-hidden">
             {/* Title */}
-            <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-8 lg:mb-12">
-              <div className="px-2 lg:px-3 xl:px-4">
+            <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-16 lg:mb-24">
+              <div className="px-2 lg:px-3 xl:px-4 flex flex-col items-center">
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Smart SEO, strategic marketing, and purposeful design — all built to expand your reach and results</h2>
               </div>
             </div>
 
             {/* Carousel */}
             <div
-              className={`w-full pt-5 relative pointer-events-none transition-opacity pb-24 overflow-hidden ${
+              className={`w-full pt-0 relative pointer-events-none transition-opacity pb-24 overflow-hidden z-10 ${
                 activeDesktop ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ height: '45vw' }}
+              style={{ height: '58.5vw' }}
             >
               <div
                 ref={desktopContainerRef}
