@@ -7,6 +7,7 @@ import Button from "./Button";
 import { motion } from "framer-motion";
 import { HiPlus } from "react-icons/hi2";
 import { useMegaMenu } from "../contexts/MegaMenuContext";
+import { getServiceSlugMap, getServiceCategories } from '@/app/data/services';
 
 const AnimatedMenuLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -77,36 +78,9 @@ const MegaMenu = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { setIsOverlayActive } = useMegaMenu();
 
-  // Map service names to correct slugs
-  const serviceSlugMap: Record<string, string> = {
-    "Search & Growth Strategy": "strategy-growth",
-    "Onsite SEO": "onsite-seo",
-    "Content Experience": "content-experience",
-    "Digital PR": "digital-pr",
-    "Social Video SEO": "social-video-seo",
-    "Data & Insights": "data-insights",
-    "Web Development": "web-development",
-    "AI Automation": "ai-automation",
-    "CRM Consultancy": "crm-consultancy",
-    "Social & Social Search": "social"
-  };
-
-  const serviceCategories = {
-    "Digital Marketing": [
-      "Search & Growth Strategy",
-      "Onsite SEO",
-      "Content Experience",
-      "Digital PR",
-      "Social Video SEO",
-      "Social & Social Search"
-    ],
-    "Web Design": [
-      "Web Development",
-      "AI Automation",
-      "CRM Consultancy",
-      "Data & Insights"
-    ]
-  };
+  // Import service data from central controller
+  const serviceSlugMap = getServiceSlugMap();
+  const serviceCategories = getServiceCategories();
 
   const menuItems: Record<string, MenuItem> = {
     Services: {

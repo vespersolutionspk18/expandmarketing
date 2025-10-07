@@ -5,6 +5,7 @@ import React, { memo, useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Button from "./Button";
 import Link from "next/link";
+import { getServicesForNav } from '@/app/data/services';
 
 // TypeScript interfaces
 interface SubmenuItem {
@@ -37,18 +38,7 @@ const Header = memo(() => {
       href: "/services",
       hasSubmenu: true,
       submenuId: "102",
-      submenuItems: [
-        { label: "Search & Growth Strategy", href: "/services/strategy-growth" },
-        { label: "Onsite SEO", href: "/services/onsite-seo" },
-        { label: "Content Experience", href: "/services/content-experience" },
-        { label: "Digital PR", href: "/services/digital-pr" },
-        { label: "Social Video SEO", href: "/services/social-video-seo" },
-        { label: "Data & Insights", href: "/services/data-insights" },
-        { label: "Web Development", href: "/services/web-development" },
-        { label: "AI Automation", href: "/services/ai-automation" },
-        { label: "CRM Consultancy", href: "/services/crm-consultancy" },
-        { label: "Social & Social Search", href: "/services/social" },
-      ]
+      submenuItems: getServicesForNav()
     },
     {
       label: "About",

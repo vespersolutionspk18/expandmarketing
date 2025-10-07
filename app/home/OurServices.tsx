@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { HiArrowUpRight } from 'react-icons/hi2'
 import Button from '../components/Button'
+import { getServicesForHomepage } from '@/app/data/services'
 
 interface Service {
   title: string
@@ -11,58 +12,8 @@ interface Service {
   image: string
 }
 
-const services: Service[] = [
-  {
-    title: 'Search & Growth Strategy',
-    href: '/services/strategy-growth',
-    image: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Onsite SEO',
-    href: '/services/onsite-seo',
-    image: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Content Experience',
-    href: '/services/content-experience',
-    image: 'https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Digital PR',
-    href: '/services/digital-pr',
-    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Social Media & Campaigns',
-    href: '/services/social',
-    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Data & Insights',
-    href: '/services/data-insights',
-    image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Social Video SEO',
-    href: '/services/social-video-seo',
-    image: 'https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'Web Development',
-    href: '/services/web-development',
-    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'AI Automation',
-    href: '/services/ai-automation',
-    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  },
-  {
-    title: 'CRM Consultancy',
-    href: '/services/crm-consultancy',
-    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
-  }
-]
+// Import services from central controller
+const services: Service[] = getServicesForHomepage()
 
 const ServiceCard = ({ service }: { service: Service }) => {
   return (

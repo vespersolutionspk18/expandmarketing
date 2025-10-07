@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { getServicesForList } from '@/app/data/services'
 
 
 if (typeof window !== 'undefined') {
@@ -21,128 +22,8 @@ interface Service {
   desktopImage: string
 }
 
-const services: Service[] = [
-  {
-    title: 'Search & Growth Strategy',
-    description: 'Strategic planning and multi-channel search optimization. We\'re audience-first organic media planners building category leaders.',
-    tags: [
-      { label: 'Multi-channel Strategy' },
-      { label: 'Audience Planning' },
-      { label: 'Growth Consulting' }
-    ],
-    href: '/services/strategy-growth',
-    thumbnailImage: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Onsite SEO',
-    description: 'Technical SEO and website optimization. Industry-leading technical excellence that defends your position in the market.',
-    tags: [
-      { label: 'Technical SEO' },
-      { label: 'Site Architecture' },
-      { label: 'Performance' }
-    ],
-    href: '/services/onsite-seo',
-    thumbnailImage: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Content Experience',
-    description: 'Search-driven content creation and strategy. Content marketing work the industry copies 3 years from now.',
-    tags: [
-      { label: 'Content Strategy' },
-      { label: 'Storytelling' },
-      { label: 'Search-First' }
-    ],
-    href: '/services/content-experience',
-    thumbnailImage: 'https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Digital PR',
-    description: 'Media relations and link building through creative campaigns. Paving the path for creative SEO with Digital PR.',
-    tags: [
-      { label: 'Media Relations' },
-      { label: 'Creative Campaigns' },
-      { label: 'Authority Building' }
-    ],
-    href: '/services/digital-pr',
-    thumbnailImage: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Social Media & Campaigns',
-    description: 'Social search optimization and social media marketing. Meeting your consumers at each stage of the journey.',
-    tags: [
-      { label: 'Social Strategy' },
-      { label: 'Community Growth' },
-      { label: 'Social Search' }
-    ],
-    href: '/services/social',
-    thumbnailImage: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Data & Insights',
-    description: 'Analytics and performance tracking. Data-driven search strategies across multiple platforms.',
-    tags: [
-      { label: 'Performance Analytics' },
-      { label: 'Strategic Insights' },
-      { label: 'ROI Tracking' }
-    ],
-    href: '/services/data-insights',
-    thumbnailImage: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Social Video SEO',
-    description: 'TikTok and YouTube optimization. Capturing audiences where they search for video content.',
-    tags: [
-      { label: 'Video Strategy' },
-      { label: 'TikTok SEO' },
-      { label: 'YouTube Growth' }
-    ],
-    href: '/services/social-video-seo',
-    thumbnailImage: 'https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'Web Development',
-    description: 'Custom website design and development solutions. Building high-performance web experiences optimized for search.',
-    tags: [
-      { label: 'Custom Development' },
-      { label: 'Responsive Design' },
-      { label: 'Performance' }
-    ],
-    href: '/services/web-development',
-    thumbnailImage: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'AI Automation',
-    description: 'Intelligent automation and AI-powered solutions. Innovation in ways your competitors don\'t even dream of.',
-    tags: [
-      { label: 'AI Solutions' },
-      { label: 'Process Automation' },
-      { label: 'Innovation' }
-    ],
-    href: '/services/ai-automation',
-    thumbnailImage: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  },
-  {
-    title: 'CRM Consultancy',
-    description: 'Customer relationship management strategy and implementation. Strategic growth partners for everything client-focused.',
-    tags: [
-      { label: 'CRM Strategy' },
-      { label: 'Implementation' },
-      { label: 'Customer Success' }
-    ],
-    href: '/services/crm-consultancy',
-    thumbnailImage: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-    desktopImage: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
-  }
-]
+// Import services from central controller
+const services: Service[] = getServicesForList()
 
 const ServicesList = () => {
   const triggerRef = useRef<HTMLDivElement>(null)
