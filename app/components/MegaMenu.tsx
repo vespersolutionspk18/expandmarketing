@@ -72,7 +72,7 @@ type MenuItem = ServiceMenuItem | AboutMenuItem;
 
 const MegaMenu = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeServiceCategory, setActiveServiceCategory] = useState("Digital Marketing");
+  const [activeServiceCategory, setActiveServiceCategory] = useState("Marketing");
   const [menuWidth, setMenuWidth] = useState<number>(1050);
   const contentRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
