@@ -246,18 +246,18 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
   }
 
   return (
-    <div className="relative w-full bg-grey-100 mb-32 lg:mb-48 overflow-hidden">
+    <div className="relative w-full bg-grey-100 mb-32 lg:mb-48">
       {/* Header */}
       <div className="relative" style={{ zIndex: 9999 }}>
         <Header />
       </div>
 
       {/* Mobile Version - w-full md:hidden */}
-      <div className="w-full md:hidden overflow-hidden">
+      <div className="w-full md:hidden">
         <div
-          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 overflow-hidden"
+          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10"
         >
-          <div className="px-0 overflow-hidden">
+          <div className="px-0">
             {/* Title */}
             <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-16 lg:mb-24">
               <div className="px-2 lg:px-3 xl:px-4 flex flex-col items-center">
@@ -294,16 +294,16 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
       </div>
 
       {/* Tablet Version - w-full hidden md:block xl:hidden */}
-      <div className="w-full hidden md:block xl:hidden overflow-hidden">
+      <div className="w-full hidden md:block xl:hidden">
         <div
-          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 overflow-hidden"
+          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10"
           style={{
             height: '80vh',
             minHeight: '640px',
             maxHeight: '720px'
           }}
         >
-          <div className="px-0 overflow-hidden">
+          <div className="px-0">
             {/* Title */}
             <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-16 lg:mb-24">
               <div className="px-2 lg:px-3 xl:px-4 flex flex-col items-center">
@@ -340,16 +340,16 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
       </div>
 
       {/* Desktop Version - w-full hidden xl:block */}
-      <div className="w-full hidden xl:block overflow-hidden">
+      <div className="w-full hidden xl:block">
         <div
-          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 3xl:mt-0 overflow-hidden"
+          className="w-full pt-20 pb-24 lg:pt-32 lg:pb-32 xl:pt-40 relative xl:-mt-10 3xl:mt-0"
           style={{
             height: '90vh',
             minHeight: '760px',
             maxHeight: '1000px'
           }}
         >
-          <div className="px-0 overflow-hidden">
+          <div className="px-0">
             {/* Title */}
             <div className="px-2 sm:px-6 xl:px-12 2xl:px-20 3xl:px-40 4xl:px-60 w-full flex flex-wrap justify-center relative z-30 mb-16 lg:mb-24">
               <div className="px-2 lg:px-3 xl:px-4 flex flex-col items-center">
