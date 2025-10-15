@@ -30,8 +30,8 @@ const BenefitsSection: React.FC = () => {
       id: 'benefit-1',
       titleLeft: '28 Days',
       titleRight: 'Holiday',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-      zIndex: 4,
+      image: 'https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95',
+      zIndex: 3,
       topOffset: 0,
       initialScale: 1
     },
@@ -39,37 +39,28 @@ const BenefitsSection: React.FC = () => {
       id: 'benefit-2',
       titleLeft: 'Work',
       titleRight: 'Anywhere',
-      image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-      zIndex: 3,
+      image: 'https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95',
+      zIndex: 2,
       topOffset: 20,
       initialScale: 0.95
     },
     {
-      id: 'benefit-3',
-      titleLeft: 'Free Mortgage',
-      titleRight: 'Advisor',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-      zIndex: 2,
+      id: 'benefit-4',
+      titleLeft: 'Team',
+      titleRight: 'Events',
+      image: 'https://images.pexels.com/photos/7551227/pexels-photo-7551227.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95',
+      zIndex: 1,
       topOffset: 40,
       initialScale: 0.9
     },
     {
-      id: 'benefit-4',
-      titleLeft: 'Yearly',
-      titleRight: 'Holiday',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-      zIndex: 1,
+      id: 'benefit-5',
+      titleLeft: 'Training &',
+      titleRight: 'Development',
+      image: 'https://images.pexels.com/photos/3321789/pexels-photo-3321789.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95',
+      zIndex: 0,
       topOffset: 60,
       initialScale: 0.85
-    },
-    {
-      id: 'benefit-5',
-      titleLeft: 'Bucket',
-      titleRight: 'List',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-      zIndex: 0,
-      topOffset: 80,
-      initialScale: 0.8
     }
   ]
 

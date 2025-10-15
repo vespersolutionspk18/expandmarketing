@@ -26,7 +26,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
 
         <a href={service.href} className="grid grid-cols-1 relative z-10">
           {/* Text Content Layer */}
-          <div className="col-start-1 row-start-1 relative z-20 py-4 flex items-center gap-3 text-black transition duration-500 lg:py-6 pointer-fine:group-hover:text-white">
+          <div className="col-start-1 row-start-1 relative z-20 py-4 flex items-center gap-3 text-black transition-colors duration-500 lg:py-6 pointer-fine:group-hover:text-white" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}>
 
             {/* Mobile Thumbnail - HIDDEN ON DESKTOP */}
             <div className="inline-flex relative w-12 h-12 rounded-lg overflow-hidden md:rounded-xl md:w-16 md:h-16 pointer-fine:hidden">
@@ -47,7 +47,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
               <div className="relative">
                 {/* Animated Arrow */}
                 <div className="absolute pr-2 top-0 left-0 overflow-hidden">
-                  <div className="transition -translate-x-full translate-y-full -rotate-45 pointer-fine:group-hover:rotate-0 pointer-fine:group-hover:translate-x-0 pointer-fine:group-hover:translate-y-0">
+                  <div className="transition-transform duration-500 -translate-x-full translate-y-full -rotate-45 pointer-fine:group-hover:rotate-0 pointer-fine:group-hover:translate-x-0 pointer-fine:group-hover:translate-y-0" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
                     <h2 className="inline-flex flex-wrap text-balance relative text-left justify-start text-current text-3xl/none lg:text-4xl/none xl:text-5xl/none 3xl:text-6xl/none font-medium tracking-tight">
                       <HiArrowUpRight />
                     </h2>
@@ -55,7 +55,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
                 </div>
 
                 {/* Service Title */}
-                <div className="transition pointer-fine:group-hover:translate-x-14">
+                <div className="transition-transform duration-500 pointer-fine:group-hover:translate-x-14" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
                   <div className="inline-flex flex-wrap text-balance relative text-left justify-start text-current text-3xl/none lg:text-4xl/none xl:text-5xl/none 3xl:text-6xl/none font-medium tracking-tight">
                     {service.title}
                   </div>
@@ -65,15 +65,15 @@ const ServiceCard = ({ service }: { service: Service }) => {
           </div>
 
           {/* Background Image Layer - rounded pill shape */}
-          <div className="col-start-1 row-start-1 relative rounded-full overflow-hidden z-10 transition bg-black opacity-0 pointer-fine:group-hover:opacity-100">
-            <div className="w-full h-full opacity-60 transition pointer-fine:group-hover:scale-[1.05]">
+          <div className="col-start-1 row-start-1 relative rounded-full overflow-hidden z-10 transition-opacity duration-500 bg-black opacity-0 pointer-fine:group-hover:opacity-100" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}>
+            <div className="w-full h-full opacity-60 transition-transform duration-500 pointer-fine:group-hover:scale-[1.05]" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
               <div className="relative overflow-hidden w-full h-full">
                 <picture>
                   <img
                     src={service.image}
                     alt={service.title}
                     className="absolute z-0 top-0 left-0 w-full h-full object-cover"
-                    style={{ objectPosition: '50% 50%' }}
+                    style={{ objectPosition: '50% 50%', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
                     loading="lazy"
                   />
                 </picture>
@@ -107,7 +107,7 @@ const OurServices = () => {
                       <div className="w-full h-full relative">
                         <picture>
                           <img
-                            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                            src="https://images.pexels.com/photos/7490886/pexels-photo-7490886.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&q=95&fit=crop"
                             alt="Services"
                             className="w-full h-full object-cover object-center absolute inset-0"
                           />

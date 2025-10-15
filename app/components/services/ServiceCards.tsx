@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import AnimatedGradient from './AnimatedGradient';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +28,10 @@ export default function ServiceCards({ cards }: ServiceCardsProps) {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [isMounted, setIsMounted] = useState(false);
   const swiperInstance = useRef<Swiper | null>(null);
+  const [swiperReady, setSwiperReady] = useState(false);
+
+  // Duplicate cards for loop mode (need at least 2x slidesPerView)
+  const duplicatedCards = [...cards, ...cards, ...cards];
 
   useEffect(() => {
     setIsMounted(true);
@@ -37,16 +41,21 @@ export default function ServiceCards({ cards }: ServiceCardsProps) {
   useEffect(() => {
     if (!swiperRef.current || !isMounted) return;
 
+    console.log('Initializing Swiper...');
+
     swiperInstance.current = new Swiper(swiperRef.current, {
       modules: [Autoplay],
       slidesPerView: 1.15,
       spaceBetween: 12,
       loop: true,
-      speed: 15000,
+      speed: 5000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
+        pauseOnMouseEnter: false,
       },
+      loopAdditionalSlides: 2,
+      allowTouchMove: true,
       grabCursor: true,
       breakpoints: {
         640: {
@@ -76,6 +85,17 @@ export default function ServiceCards({ cards }: ServiceCardsProps) {
       },
     });
 
+    console.log('Swiper created:', swiperInstance.current);
+
+    // Start autoplay
+    setTimeout(() => {
+      if (swiperInstance.current?.autoplay) {
+        console.log('Starting autoplay...');
+        swiperInstance.current.autoplay.start();
+        setSwiperReady(true);
+      }
+    }, 100);
+
     return () => {
       if (swiperInstance.current) {
         swiperInstance.current.destroy();
@@ -83,29 +103,45 @@ export default function ServiceCards({ cards }: ServiceCardsProps) {
     };
   }, [isMounted]);
 
-  // GSAP Scroll Animation (Desktop only)
+  // GSAP Scroll - Speed up on scroll
   useEffect(() => {
-    if (!containerRef.current || !isMounted) return;
+    if (!containerRef.current || !swiperReady || !swiperInstance.current) return;
+
+    console.log('Setting up scroll handler...');
 
     const isFineFointer = window.matchMedia('(pointer: fine)').matches;
 
     if (isFineFointer) {
-      const scrollAnimation = gsap.to(containerRef.current, {
-        xPercent: -20,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 100%',
-          end: 'bottom -100%',
-          scrub: true,
-        },
-      });
+      let scrollVelocity = 0;
+      let lastScrollY = window.scrollY;
+      const baseSpeed = 5000;
+
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        scrollVelocity = Math.abs(currentScrollY - lastScrollY);
+        lastScrollY = currentScrollY;
+
+        // Speed multiplier (1x to 5x)
+        const multiplier = Math.min(scrollVelocity / 20, 4);
+        const newSpeed = Math.max(baseSpeed / (1 + multiplier), 1000);
+
+        if (swiperInstance.current) {
+          swiperInstance.current.params.speed = newSpeed;
+
+          // Force advance on fast scroll
+          if (multiplier > 2) {
+            swiperInstance.current.slideNext(newSpeed);
+          }
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
 
       return () => {
-        scrollAnimation.kill();
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [isMounted]);
+  }, [swiperReady]);
 
   return (
     <section className="w-full pb-12 | xl:pb-24">
@@ -118,23 +154,16 @@ export default function ServiceCards({ cards }: ServiceCardsProps) {
             >
               <div ref={swiperRef} className="w-full | swiper">
                 <div className="!ease-linear | swiper-wrapper">
-                  {cards.map((card, index) => (
-                    <div key={card.id} className="swiper-slide | px-1.5 | md:px-2.5">
+                  {duplicatedCards.map((card, index) => (
+                    <div key={`${card.id}-${index}`} className="swiper-slide | px-1.5 | md:px-2.5">
                       <div
                         className="w-full flex flex-col bg-white rounded-2xl p-3 | md:h-[50vw] | lg:rounded-3xl lg:h-[30vw] | 3xl:h-[22vw]"
                         onMouseEnter={() => setHoveredCard(card.id)}
                         onMouseLeave={() => setHoveredCard(null)}
                       >
-                        {/* Image Container */}
+                        {/* Gradient Container */}
                         <div className="flex-1 w-full relative rounded-xl overflow-hidden aspect-4/3 pointer-fine:aspect-auto lg:rounded-2xl">
-                          <Image
-                            src={card.image}
-                            alt={card.imageAlt}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
-                            loading={index < 2 ? 'eager' : 'lazy'}
-                          />
+                          <AnimatedGradient />
                         </div>
 
                         {/* Content Area */}
@@ -147,13 +176,16 @@ export default function ServiceCards({ cards }: ServiceCardsProps) {
                           {/* Description - Desktop (hover to expand) */}
                           <div className="hidden pointer-fine:block">
                             <div
-                              className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                                hoveredCard === card.id
-                                  ? 'max-h-96 opacity-100 mt-2 pr-2'
-                                  : 'max-h-0 opacity-0'
-                              }`}
+                              className="overflow-hidden"
+                              style={{
+                                maxHeight: hoveredCard === card.id ? '500px' : '0px',
+                                opacity: hoveredCard === card.id ? 1 : 0,
+                                transform: hoveredCard === card.id ? 'translateY(0)' : 'translateY(-5px)',
+                                transition: 'opacity 0.15s ease-out, transform 0.15s ease-out, max-height 0.2s ease-out',
+                                willChange: 'transform, opacity, max-height',
+                              }}
                             >
-                              <p className="text-base leading-normal text-pretty lg:text-lg xl:text-xl text-grey-900 mb-0">
+                              <p className="text-base leading-normal text-pretty lg:text-lg xl:text-xl text-grey-900 mb-0 mt-2 pr-2">
                                 {card.description}
                               </p>
                             </div>

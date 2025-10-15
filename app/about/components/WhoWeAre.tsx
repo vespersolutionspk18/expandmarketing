@@ -31,7 +31,7 @@ const WhoWeAre = () => {
 
             {/* Main heading */}
             <h2 className="inline-flex flex-wrap text-balance relative   text-left justify-start text-grey-900 text-3xl/none | lg:text-5xl/none | xl:text-6xl/none | 3xl:text-7xl/0.9 font-sans-primary font-medium tracking-tight js-heading">
-              A global team of search-first strategists creating category leaders across UK, USA, and EU
+              A global team helping businesses get found online, grow their revenue, and build brands people remember
             </h2>
 
             {/* Desktop buttons - hidden on mobile */}

@@ -15,7 +15,7 @@ const ContactHero = () => {
             <div className="col-start-1 row-start-1 relative z-0">
               <div className="relative w-full h-full min-h-[500px] md:min-h-[600px]">
                 <Image
-                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=2000&h=2000&fit=crop"
+                  src="https://images.pexels.com/photos/18999193/pexels-photo-18999193.jpeg?auto=compress&cs=tinysrgb&w=2000&q=95"
                   alt="Team collaboration"
                   fill
                   className="w-full h-full object-cover absolute inset-0 transition-opacity"

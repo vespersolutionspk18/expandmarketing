@@ -80,7 +80,7 @@ const AboutUs = () => {
             className="bg-black rounded-2xl px-4 sm:px-6 md:px-10 py-8 md:py-12 flex flex-col gap-12 md:gap-24 w-full">
         <div className="flex flex-col md:flex-row w-full gap-4 md:gap-10">
           <div className="w-full md:w-[10%]">
-              <p className="text-white text-sm md:text-md tracking-tighter">Working with <br></br>Global Brands</p>
+              <p className="text-white text-sm md:text-md tracking-tighter">We Help Businesses <br></br>Get Found Online</p>
 
           </div>
           <div className="w-full md:w-[90%] overflow-hidden relative marquee-edge-blur">
@@ -95,13 +95,13 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-10 justify-between">
           <div className="text-lg sm:text-xl md:text-2xl font-semibold w-full md:w-[40%] tracking-tighter leading-tight text-white">
-              Award-winning search-first content marketing agency creating category leaders through innovative SEO and digital strategies.
+              We&apos;re a marketing agency that helps companies show up in search results, attract more customers, and grow their revenue through SEO, content, and digital marketing.
           </div>
           <div className="hidden md:block md:w-[10%]">
 
           </div>
           <div className="w-full md:w-[50%] flex flex-col gap-5">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans text-white tracking-tighter">Agile, Creative, Performance-Led <Image alt="Growth icon" src={"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop"} width={40} height={40} className="md:w-[56px] md:h-[56px] rounded-md inline-block align-middle"/></div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans text-white tracking-tighter">More Traffic. More Leads. Real Results. <Image alt="Growth icon" src={"https://images.pexels.com/photos/7889169/pexels-photo-7889169.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&q=95&fit=crop"} width={40} height={40} className="md:w-[56px] md:h-[56px] rounded-md inline-block align-middle"/></div>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-5">
                   <Button href="/about" variant="secondary" className="w-full sm:w-auto">About Us</Button>
                    <Button href="/services" variant="primary" className="w-full sm:w-auto">How We Work</Button>

@@ -26,7 +26,7 @@ export default function WorkHero() {
                 >
                   <div className="w-full h-full relative">
                     <Image
-                      src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                      src="https://images.pexels.com/photos/3459967/pexels-photo-3459967.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&q=95&fit=crop"
                       alt="Solve"
                       width={200}
                       height={200}

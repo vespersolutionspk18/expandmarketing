@@ -92,7 +92,7 @@ function horizontalLoop(items: HTMLElement[], config: { repeat?: number; paused?
 
 const LeadChange: React.FC<LeadChangeProps> = ({
   text = "Lead The Change",
-  imageSrc = "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+  imageSrc = "https://images.pexels.com/photos/11278239/pexels-photo-11278239.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95&fit=crop"
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const marqueeWrapperRef = useRef<HTMLDivElement>(null);

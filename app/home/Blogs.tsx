@@ -105,7 +105,7 @@ const Blogs = () => {
                     {/* Embedded square image */}
                     <div className="inline shrink-0 flex bg-black/10 relative overflow-hidden bg-black/5 rounded-md mx-2 md:mx-2">
                       <Image
-                        src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop"
+                        src="https://images.pexels.com/photos/14929938/pexels-photo-14929938.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&q=95&fit=crop"
                         alt="What's New"
                         width={40}
                         height={40}

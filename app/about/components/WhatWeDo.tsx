@@ -3,16 +3,16 @@ import LeftRight from '@/app/components/LeftRight';
 export default function WhatWeDo() {
   return (
     <LeftRight
-      imageSrc="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
+      imageSrc="https://images.pexels.com/photos/7710086/pexels-photo-7710086.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95"
       imageAlt="Team collaboration"
       label="What we do"
-      title="We chase consumers, not algorithms"
+      title="We build brands people search for"
       content={[
-        'Category leaders don\'t just capture the traffic, they\'re creating the demand in the first place. At the very top of the funnel they are the ones in the market triggering and influencing what people want before search even begins.',
-        'At Expand Marketing, strategy isn\'t a one-off slide deck—it\'s always-on. We move with the platforms, tap into what\'s working right now, and constantly seek out new windows of opportunity.',
-        'We paved the path for creative SEO, multi-channel search with Digital PR, and Social Search and we will continue to do it.',
-        'Agile, creative, performance-led organic that drives real growth.',
-        'We\'re dedicated to creating the industry narrative that others follow 3 years from now.',
+        'The best brands don\'t wait for people to search for them. They show up early, create conversations, and shape what people are looking for in the first place. That\'s where we focus.',
+        'We combine SEO with content marketing, digital PR, and social media to make sure your brand gets found everywhere your customers are looking. Not just Google. Everywhere.',
+        'Our strategies evolve with the platforms. When something changes or a new opportunity opens up, we adapt fast. No rigid playbooks, no waiting months to pivot.',
+        'We\'ve built our reputation on creative SEO and multi-channel search campaigns that actually drive traffic and revenue. No fluff, just measurable results.',
+        'While other agencies copy what\'s already working, we\'re testing what\'s next. The tactics that become industry standard in a few years? We\'re running them now.',
       ]}
       buttonText="Our Services"
       buttonHref="/services"

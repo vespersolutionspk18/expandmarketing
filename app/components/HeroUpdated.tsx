@@ -15,15 +15,15 @@ interface HeroUpdatedProps {
 }
 
 const DEFAULT_IMAGES = [
-  'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3182765/pexels-photo-3182765.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
-  'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop'
+  'https://images.pexels.com/photos/973408/pexels-photo-973408.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/1647919/pexels-photo-1647919.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/933255/pexels-photo-933255.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/1058100/pexels-photo-1058100.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/7606033/pexels-photo-7606033.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/716276/pexels-photo-716276.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/3584953/pexels-photo-3584953.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/7710047/pexels-photo-7710047.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+  'https://images.pexels.com/photos/3585033/pexels-photo-3585033.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop'
 ]
 
 const HeroUpdated: React.FC<HeroUpdatedProps> = ({
@@ -264,7 +264,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Customers are searching for your business. Let&apos;s get you found</h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you, choose you, and drive real revenue, not just traffic.</h2>
               </div>
             </div>
 
@@ -310,7 +310,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Smart SEO, strategic marketing, and purposeful design — all built to expand your reach and results</h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you, choose you, and drive real revenue, not just traffic.</h2>
               </div>
             </div>
 
@@ -356,7 +356,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Smart SEO, strategic marketing, and purposeful design — all built to expand your reach and results</h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you, choose you, and drive real revenue, not just traffic.</h2>
               </div>
             </div>
 

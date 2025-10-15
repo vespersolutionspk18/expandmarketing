@@ -5,27 +5,27 @@ const BrightestMindsSection = () => {
     {
       id: 1,
       title: 'Our Mission',
-      content: 'Is to be the most recommended agency globally.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop'
+      content: 'We help businesses grow through smart marketing. Our goal is simple: do great work, treat people well, and build long-term relationships with clients who trust us to deliver.',
+      image: 'https://images.pexels.com/photos/1181346/pexels-photo-1181346.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95'
     },
     {
       id: 2,
       title: 'Training & Progression',
       content: 'From onboarding bootcamps to mentoring sessions and career development frameworks we make sure everyone here is progressing. We invest in our team through comprehensive training programmes and mentorship opportunities.',
-      image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop'
+      image: 'https://images.pexels.com/photos/3321791/pexels-photo-3321791.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95'
     },
     {
       id: 3,
       title: 'Our Culture',
-      content: 'This is a home for big thinkers, loud laughs, the underdogs and career-defining moments. We work hard, but we celebrate harder. From team events to work celebrations, we\'ve built something people want to be part of.',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop'
+      content: 'We work hard and we care about what we do. You\'ll find people here who take pride in their work, support each other, and actually enjoy coming to the office. We celebrate wins together, solve problems as a team, and make time for the things that make work feel less like work.',
+      image: 'https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95'
     }
   ];
 
   return (
     <LeftRight
       imageAlt="Team collaboration"
-      title="We are the brightest minds, biggest talents and bravest thinkers in the industry."
+      title="Join a team that's building something worth working for."
       accordion={accordionItems}
       autoPlayAccordion={true}
       autoPlayInterval={10000}

@@ -87,7 +87,7 @@ const MegaMenu = () => {
       title: "Core Services",
       categories: serviceCategories,
       activeCategory: activeServiceCategory,
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      image: "https://images.pexels.com/photos/5292198/pexels-photo-5292198.jpeg?auto=compress&cs=tinysrgb&w=1600&q=95",
       buttonText: "View All Services",
       buttonLink: "/services"
     } as ServiceMenuItem,

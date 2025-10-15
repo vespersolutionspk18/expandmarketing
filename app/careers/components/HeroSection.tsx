@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
             {/* Background Image */}
             <div className="absolute top-0 left-0 w-full h-full z-0">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1125&fit=crop"
+                src="https://images.pexels.com/photos/7658240/pexels-photo-7658240.jpeg?auto=compress&cs=tinysrgb&w=2000&q=95"
                 alt="Team collaboration"
                 className="w-full h-full object-cover absolute inset-0"
               />

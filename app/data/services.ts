@@ -20,6 +20,8 @@ export interface Service {
     thumbnail: string;
     card: string;
     desktop: string;
+    process?: string;  // Image for "Our Process" section
+    whyExpand?: string;  // Image for "Why Expand" accordion section
   };
 }
 
@@ -35,7 +37,7 @@ export const SERVICES: Service[] = [
     id: '1',
     title: 'Search & Growth Strategy',
     slug: 'strategy-growth',
-    description: 'Your roadmap from where you are to where you want to be. We map out multi-channel strategies that turn ambition into action and traffic into revenue.',
+    description: 'We figure out where your best customers are online and build a clear plan to reach them. SEO, content, ads, social: we map out what works and how to scale it.',
     category: 'Marketing',
     tags: [
       { label: 'Strategic Planning' },
@@ -43,16 +45,17 @@ export const SERVICES: Service[] = [
       { label: 'Growth Roadmaps' }
     ],
     images: {
-      thumbnail: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
-      card: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80',
-      desktop: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500'
+      thumbnail: 'https://images.pexels.com/photos/13628541/pexels-photo-13628541.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
+      card: 'https://images.pexels.com/photos/5083397/pexels-photo-5083397.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80',
+      desktop: 'https://images.pexels.com/photos/13628541/pexels-photo-13628541.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1500',
+      process: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
     }
   },
   {
     id: '2',
     title: 'Social Media Marketing',
     slug: 'social-media-marketing',
-    description: 'Stop posting into the void. We create social content that sparks conversations, builds communities, and actually drives business results across every platform.',
+    description: 'We handle your social media from strategy to execution. Content creation, account management, paid campaigns, and performance tracking across Instagram, LinkedIn, TikTok, Facebook, and Twitter.',
     category: 'Marketing',
     tags: [
       { label: 'Content Creation' },
@@ -69,7 +72,7 @@ export const SERVICES: Service[] = [
     id: '3',
     title: 'Content Marketing',
     slug: 'content-marketing',
-    description: 'Content that people actually want to read. We craft stories and strategies that position you as the expert, build trust, and turn readers into customers.',
+    description: 'We write the blog posts, articles, and guides that bring people to your website. SEO-optimized content that ranks in search, answers questions, and turns visitors into customers.',
     category: 'Marketing',
     tags: [
       { label: 'Content Strategy' },
@@ -86,7 +89,7 @@ export const SERVICES: Service[] = [
     id: '4',
     title: 'Email Marketing',
     slug: 'email-marketing',
-    description: 'Emails people open, click, and buy from. We design campaigns that land in inboxes (not spam folders) and nurture relationships that lead to real revenue.',
+    description: 'We build email systems that generate sales while you sleep. From welcome sequences to weekly newsletters to abandoned cart recovery, we handle the strategy, writing, design, and setup so your emails actually make money.',
     category: 'Marketing',
     tags: [
       { label: 'Email Campaigns' },
@@ -103,7 +106,7 @@ export const SERVICES: Service[] = [
     id: '5',
     title: 'Paid Advertising',
     slug: 'paid-advertising',
-    description: 'Every dollar working harder. We run Google Ads, Meta, LinkedIn, and YouTube campaigns that reach the right people, at the right time, with measurable ROI.',
+    description: 'We run paid ad campaigns on Google, Facebook, Instagram, LinkedIn, and YouTube. You get targeted traffic, clear tracking, and campaigns that improve based on real performance data.',
     category: 'Marketing',
     tags: [
       { label: 'Google Ads' },
@@ -120,7 +123,7 @@ export const SERVICES: Service[] = [
     id: '6',
     title: 'Digital PR',
     slug: 'digital-pr',
-    description: 'Get featured where it matters. We secure media placements, build authoritative backlinks, and create campaigns that boost your credibility and visibility.',
+    description: 'We get your company featured in online publications that matter to your audience. Real media coverage that brings traffic, backlinks, and new customers who already trust you.',
     category: 'Marketing',
     tags: [
       { label: 'Media Relations' },
@@ -137,7 +140,7 @@ export const SERVICES: Service[] = [
     id: '7',
     title: 'Video Marketing',
     slug: 'video-marketing',
-    description: 'Video that stops the scroll. From TikTok to YouTube, we create video content and strategies that capture attention, tell your story, and drive real engagement.',
+    description: 'We plan, produce, and optimize video content that works across platforms. From scripting and filming to editing and distribution, we handle the full process: product demos, tutorials, testimonials, and social clips for TikTok, YouTube, and Instagram.',
     category: 'Marketing',
     tags: [
       { label: 'Video Strategy' },
@@ -154,7 +157,7 @@ export const SERVICES: Service[] = [
     id: '8',
     title: 'Brand Strategy',
     slug: 'brand-strategy',
-    description: 'Stand out or blend in. We help you define what makes you different, build a brand that resonates, and create messaging that sticks in your customer\'s mind.',
+    description: 'We help you define what your business actually stands for and how it\'s different from everyone else. Through positioning research, messaging development, and voice guidelines, we give you a clear brand foundation that works across every customer touchpoint.',
     category: 'Marketing',
     tags: [
       { label: 'Brand Identity' },
@@ -175,7 +178,7 @@ export const SERVICES: Service[] = [
     id: '9',
     title: 'Web Development',
     slug: 'web-development',
-    description: 'Websites that work as hard as you do. Fast, beautiful, and built to convert. We create custom sites that look stunning and perform even better.',
+    description: 'We build websites from the ground up using modern frameworks and clean code. Our developers handle everything from initial design implementation to backend infrastructure, creating sites that load fast, work smoothly across all devices, and are easy for you to maintain.',
     category: 'Website & SEO',
     tags: [
       { label: 'Custom Development' },
@@ -192,7 +195,7 @@ export const SERVICES: Service[] = [
     id: '10',
     title: 'Technical SEO',
     slug: 'technical-seo',
-    description: 'The foundation Google loves. We fix the technical issues holding you back, optimize site speed, and make sure search engines can find and rank your best content.',
+    description: 'We audit your website\'s technical foundation, fix crawl errors and broken links, optimize site speed and Core Web Vitals, implement structured data, and configure XML sitemaps. Our team resolves indexing issues, manages redirects, and ensures search engines can properly access and rank your content.',
     category: 'Website & SEO',
     tags: [
       { label: 'Site Speed' },
@@ -209,7 +212,7 @@ export const SERVICES: Service[] = [
     id: '11',
     title: 'On-Page SEO',
     slug: 'on-page-seo',
-    description: 'Content that climbs the rankings. We optimize every page to rank higher, attract more traffic, and turn visitors into customers through smart SEO fundamentals.',
+    description: 'We optimize the content and HTML elements on your pages to rank higher in search results. From title tags and headers to keyword placement and internal links, we refine what search engines read and what users see to drive more organic traffic.',
     category: 'Website & SEO',
     tags: [
       { label: 'Content Optimization' },
@@ -226,7 +229,7 @@ export const SERVICES: Service[] = [
     id: '12',
     title: 'Local SEO',
     slug: 'local-seo',
-    description: 'Own your neighborhood. We optimize your Google Business Profile, build local citations, and help you dominate local search results where your customers are looking.',
+    description: 'We get your business showing up when locals search for what you offer. This includes optimizing your Google Business Profile, building citations across directories, managing reviews, and improving your Google Maps ranking so customers can find you when they need you.',
     category: 'Website & SEO',
     tags: [
       { label: 'Google Business' },
@@ -243,7 +246,7 @@ export const SERVICES: Service[] = [
     id: '13',
     title: 'E-commerce Development',
     slug: 'ecommerce-development',
-    description: 'Online stores that sell. We build seamless shopping experiences on Shopify, WooCommerce, and custom platforms that make buying easy and keep customers coming back.',
+    description: 'We build online stores that turn browsers into buyers. From product catalogs and shopping carts to payment processing and order management, we handle the technical setup that makes selling online possible on Shopify, WooCommerce, or custom platforms.',
     category: 'Website & SEO',
     tags: [
       { label: 'Shopify' },
@@ -260,7 +263,7 @@ export const SERVICES: Service[] = [
     id: '14',
     title: 'SEO Audits',
     slug: 'seo-audits',
-    description: 'Find out what\'s holding you back. We dive deep into your site, identify opportunities, and deliver a clear action plan to boost your rankings and traffic.',
+    description: 'We analyze your website\'s technical structure, content quality, and backlink profile to identify what\'s preventing higher rankings. You receive a prioritized audit report with specific fixes ranked by impact, so you know exactly what to tackle first.',
     category: 'Website & SEO',
     tags: [
       { label: 'Site Analysis' },
@@ -277,7 +280,7 @@ export const SERVICES: Service[] = [
     id: '15',
     title: 'Conversion Optimization',
     slug: 'conversion-optimization',
-    description: 'Turn traffic into customers. We test, tweak, and optimize every element of your site to increase conversions and maximize the value of every visitor.',
+    description: 'We run systematic tests on your website to find out what makes visitors take action. Then we optimize those elements to turn more of your traffic into leads and customers.',
     category: 'Website & SEO',
     tags: [
       { label: 'A/B Testing' },
@@ -294,7 +297,7 @@ export const SERVICES: Service[] = [
     id: '16',
     title: 'Website Maintenance',
     slug: 'website-maintenance',
-    description: 'Keep your site running smooth. Regular updates, security patches, backups, and monitoring so you can focus on your business while we handle the tech.',
+    description: 'We handle the technical upkeep that keeps your website secure, fast, and online. That means regular software updates, security monitoring, automated backups, and fixing issues before they affect your customers.',
     category: 'Website & SEO',
     tags: [
       { label: 'Updates & Security' },
@@ -315,7 +318,7 @@ export const SERVICES: Service[] = [
     id: '17',
     title: 'CRM Implementation',
     slug: 'crm-implementation',
-    description: 'CRM that actually gets used. We set up and customize HubSpot, Salesforce, or your platform of choice so your team loves using it and your data finally makes sense.',
+    description: 'We implement and configure CRM platforms like HubSpot and Salesforce to match your actual sales process. This includes system setup, custom field creation, data migration from your existing tools, integrations with your other software, and hands-on training for your team.',
     category: 'CRM & Sales Automation',
     tags: [
       { label: 'HubSpot' },
@@ -332,7 +335,7 @@ export const SERVICES: Service[] = [
     id: '18',
     title: 'Marketing Automation',
     slug: 'marketing-automation',
-    description: 'Set it up, watch it work. We build automated workflows that nurture leads, segment audiences, and send the right message at the right time, all on autopilot.',
+    description: 'We build automated email workflows that follow up with leads, segment your audience, and send personalized messages based on what people actually do. Set up once, runs continuously.',
     category: 'CRM & Sales Automation',
     tags: [
       { label: 'Email Automation' },
@@ -349,7 +352,7 @@ export const SERVICES: Service[] = [
     id: '19',
     title: 'Sales Funnel Automation',
     slug: 'sales-funnel-automation',
-    description: 'Automate the path to purchase. We design and build funnels that qualify leads, move prospects forward, and give your sales team hot opportunities ready to close.',
+    description: 'We build automated systems that score leads, qualify prospects, and move them through your sales pipeline. Your sales team gets notified exactly when someone is ready to buy, not when they first fill out a form.',
     category: 'CRM & Sales Automation',
     tags: [
       { label: 'Lead Scoring' },
@@ -366,7 +369,7 @@ export const SERVICES: Service[] = [
     id: '20',
     title: 'Lead Generation Systems',
     slug: 'lead-generation-systems',
-    description: 'More leads, less effort. We build systems that capture, qualify, and route leads automatically so you spend time closing deals, not chasing cold prospects.',
+    description: 'We build lead capture systems that collect inquiries from every channel, qualify them automatically, and route them to the right person. You get forms, landing pages, chatbots, and qualification logic that work together so no lead gets ignored.',
     category: 'CRM & Sales Automation',
     tags: [
       { label: 'Lead Capture' },
@@ -383,7 +386,7 @@ export const SERVICES: Service[] = [
     id: '21',
     title: 'Pipeline Management',
     slug: 'pipeline-management',
-    description: 'Never lose track of a deal again. We optimize your sales pipeline, implement tracking systems, and give you the visibility and insights to close more consistently.',
+    description: 'We build and optimize your sales pipeline so you never lose track of a deal. You get clear visibility into every opportunity, automated tracking systems, and the reporting you need to close more consistently.',
     category: 'CRM & Sales Automation',
     tags: [
       { label: 'Pipeline Optimization' },
@@ -400,7 +403,7 @@ export const SERVICES: Service[] = [
     id: '22',
     title: 'Integration Services',
     slug: 'integration-services',
-    description: 'Make your tools talk to each other. We connect your CRM, email, ads, and analytics platforms so data flows seamlessly and you have one source of truth.',
+    description: 'We connect your business tools so data flows automatically between them. No more manual exports, duplicate entry, or information living in different places. Your CRM, email platform, ads, and analytics all work together as one system.',
     category: 'CRM & Sales Automation',
     tags: [
       { label: 'API Integration' },
@@ -421,7 +424,7 @@ export const SERVICES: Service[] = [
     id: '23',
     title: 'AI Strategy & Consulting',
     slug: 'ai-strategy',
-    description: 'AI that makes sense for your business. We help you identify real opportunities, choose the right tools, and implement AI solutions that actually move the needle.',
+    description: 'We help you figure out where AI actually helps your business and how to implement it without wasting money on hype. You get a clear roadmap showing which use cases deliver ROI, which tools to use, and how to roll it out step by step.',
     category: 'AI',
     tags: [
       { label: 'AI Planning' },
@@ -438,7 +441,7 @@ export const SERVICES: Service[] = [
     id: '24',
     title: 'AI Chatbots',
     slug: 'ai-chatbots',
-    description: '24/7 support that feels human. We build intelligent chatbots that answer questions, qualify leads, and handle customer service while you sleep.',
+    description: 'AI chatbots that answer customer questions, qualify leads, and handle support requests 24/7. We build conversational systems that sound natural, integrate with your existing tools, and work around the clock without requiring human staff.',
     category: 'AI',
     tags: [
       { label: 'Customer Service' },
@@ -455,7 +458,7 @@ export const SERVICES: Service[] = [
     id: '25',
     title: 'AI Content Tools',
     slug: 'ai-content-tools',
-    description: 'Scale content without losing your voice. We implement AI writing tools, build custom workflows, and help you create more content faster while maintaining quality.',
+    description: 'We set up AI writing tools that help you produce more content without hiring more writers. This includes custom workflows, brand voice training, and quality controls that keep your standards high while your output scales.',
     category: 'AI',
     tags: [
       { label: 'Content Generation' },
@@ -472,7 +475,7 @@ export const SERVICES: Service[] = [
     id: '26',
     title: 'AI Personalization',
     slug: 'ai-personalization',
-    description: 'Show everyone exactly what they want to see. We use AI to personalize content, product recommendations, and experiences based on behavior and preferences.',
+    description: 'We use AI to personalize what each visitor sees on your website. That means dynamic content, smart product recommendations, and experiences that adapt to individual behavior and preferences.',
     category: 'AI',
     tags: [
       { label: 'Dynamic Content' },
@@ -489,7 +492,7 @@ export const SERVICES: Service[] = [
     id: '27',
     title: 'Predictive Analytics',
     slug: 'predictive-analytics',
-    description: 'See what\'s coming before it happens. We build AI models that forecast trends, predict customer behavior, and give you insights to make smarter decisions.',
+    description: 'We build AI models that predict customer behavior, forecast revenue, and spot market trends before they happen. Get clear insights about what\'s coming so you can plan with confidence instead of guessing.',
     category: 'AI',
     tags: [
       { label: 'Forecasting' },
@@ -506,7 +509,7 @@ export const SERVICES: Service[] = [
     id: '28',
     title: 'Custom AI Solutions',
     slug: 'custom-ai-solutions',
-    description: 'AI built specifically for you. From custom models to unique automations, we develop tailored AI solutions that solve your specific business challenges.',
+    description: 'We build AI solutions designed specifically for your business challenges. Custom models, specialized automations, and proprietary integrations that work exactly how you need them to.',
     category: 'AI',
     tags: [
       { label: 'Custom Development' },

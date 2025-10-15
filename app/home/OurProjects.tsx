@@ -45,7 +45,7 @@ const ProjectCard = ({ project, isActive, onHover }: {
       onMouseLeave={() => onHover(null)}
     >
       {/* Background Image */}
-      <div className="col-start-1 row-start-1 transition md:group-hover:scale-105">
+      <div className="col-start-1 row-start-1 transition-transform duration-500 md:group-hover:scale-105" style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
         <div className="relative overflow-hidden w-full" style={{ paddingTop: '75%' }}>
           <Image
             src={project.image}
@@ -53,6 +53,7 @@ const ProjectCard = ({ project, isActive, onHover }: {
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
           />
         </div>
       </div>
@@ -79,10 +80,12 @@ const ProjectCard = ({ project, isActive, onHover }: {
 
       {/* Hover Overlay with Color - Circle Mask - DESKTOP ONLY */}
       <div
-        className="hidden lg:flex col-start-1 row-start-1 grid-cols-12 flex-col items-start justify-between z-40 p-3 transition lg:p-5 circle-mask"
+        className="hidden lg:flex col-start-1 row-start-1 grid-cols-12 flex-col items-start justify-between z-40 p-3 lg:p-5 circle-mask"
         style={{
           backgroundColor: project.color,
-          color: '#111212'
+          color: '#111212',
+          WebkitBackfaceVisibility: 'hidden',
+          backfaceVisibility: 'hidden'
         }}
       >
         <div className="inline-flex flex-wrap text-balance relative text-left justify-start text-current text-3xl/none lg:text-4xl/none xl:text-5xl/none font-medium tracking-tight">
@@ -136,6 +139,8 @@ const OurProjects = () => {
         y: -scrollDistance,
         ease: 'none',
         force3D: true,
+        willChange: 'transform',
+        backfaceVisibility: 'hidden',
         scrollTrigger: {
           trigger: trigger,
           start: 'top top',
@@ -165,7 +170,9 @@ const OurProjects = () => {
               y: (headingsContainer.offsetHeight * -1) + 300,
               duration: 4,
               ease: 'none',
-              force3D: true
+              force3D: true,
+              willChange: 'transform',
+              backfaceVisibility: 'hidden'
             },
             0
           )
@@ -189,6 +196,8 @@ const OurProjects = () => {
         y: -scrollDistance,
         ease: 'none',
         force3D: true,
+        willChange: 'transform',
+        backfaceVisibility: 'hidden',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
@@ -232,13 +241,15 @@ const OurProjects = () => {
                       {projects.map((project) => (
                         <div
                           key={project.id}
-                          className="relative transition js-heading-40"
+                          className="relative js-heading-40"
+                          style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden' }}
                         >
                           <a
                             href={project.link}
-                            className={`flex items-start gap-x-2 transition ${hovering && activeProject === project.id ? 'translate-x-3' : ''}`}
+                            className={`flex items-start gap-x-2 transition-transform duration-300 ${hovering && activeProject === project.id ? 'translate-x-3' : ''}`}
                             onMouseEnter={() => handleProjectHover(project.id)}
                             onMouseLeave={() => handleProjectHover(null)}
+                            style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
                           >
                             <div className="inline-flex flex-wrap text-balance relative text-left justify-start text-white text-5xl/none lg:text-6xl/none xl:text-7xl/[0.9] font-medium tracking-tight">
                               {project.title}
