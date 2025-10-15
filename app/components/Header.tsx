@@ -116,7 +116,7 @@ const Header = memo(() => {
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Button href="/get-a-free-estimate" variant="secondary">
+            <Button href="/contact" variant="secondary">
               Get Started
             </Button>
           </div>
@@ -304,7 +304,7 @@ const Header = memo(() => {
           {/* CTA Button at bottom */}
           <div className="w-full">
             <Button
-              href="/get-a-free-estimate"
+              href="/contact"
               variant="secondary"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full"

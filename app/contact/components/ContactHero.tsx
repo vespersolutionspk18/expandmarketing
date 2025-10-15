@@ -26,22 +26,28 @@ const ContactHero = () => {
             </div>
 
             {/* Overlay Content with Backdrop Blur */}
-            <div className="col-start-1 row-start-1 flex flex-col items-start justify-between p-5 relative z-20 backdrop-blur-md gap-y-3 md:gap-y-5 lg:p-7">
+            <div className="col-start-1 row-start-1 flex flex-col items-start justify-between p-5 relative z-20 backdrop-blur-md bg-black/50 gap-y-3 md:gap-y-5 lg:p-7">
               {/* Main Heading */}
               <h2 className="inline-flex flex-wrap text-balance relative text-left justify-start text-white text-3xl/none lg:text-5xl/none xl:text-6xl/none 3xl:text-7xl/[0.9] font-sans-primary font-medium tracking-tight">
                 Fill out our form to get in touch
               </h2>
 
               {/* Bottom Content */}
-              <div className="flex flex-col items-start mt-3 lg:mt-0 gap-y-3 md:gap-y-5">
+              <div className="flex flex-col items-start gap-y-3 md:gap-y-5 w-full">
+                {/* Square Image Container */}
+                <div
+                  className="w-full aspect-square rounded-3xl bg-cover bg-left-top bg-no-repeat"
+                  style={{ backgroundImage: 'url(/plan.png)' }}
+                />
+
                 {/* Subheading */}
-                <h2 className="inline-flex flex-wrap text-balance relative text-left justify-start text-white text-base/tight lg:text-lg/tight xl:text-xl/tight 4xl:text-2xl/none font-sans-primary font-medium tracking-tight">
-                  Interested in joining our team? Head over to our Careers page to check our latest job vacancies.
-                </h2>
+                <p className="text-white text-base/tight lg:text-lg/tight font-sans-primary font-medium tracking-tight">
+                  For a detailed and strategical plan, click here.
+                </p>
 
                 {/* Button */}
-                <Button href="/careers" variant="secondary" className="w-full md:w-auto">
-                  Careers
+                <Button href="/get-a-free-estimate" variant="secondary" className="w-full md:w-auto">
+                  Detailed Plan
                 </Button>
               </div>
             </div>
