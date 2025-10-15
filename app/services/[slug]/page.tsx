@@ -12,6 +12,7 @@ import RecommendedByLeaders from '@/app/components/services/RecommendedByLeaders
 import FAQ from '@/app/components/services/FAQ';
 import Blogs from '@/app/home/Blogs';
 import ExpandReady from '@/app/components/ExpandReady';
+import CollapsibleSection from '@/app/components/services/CollapsibleSection';
 import { getServiceBySlug, getAllServiceSlugs, Service } from '@/app/data/services';
 
 // Generate static params for all services
@@ -1479,14 +1480,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           imagePosition="left"
         />
 
-        <LeadChange />
+        <CollapsibleSection>
+          <LeadChange />
 
-        <LeftRight
-          imageSrc={service.images.whyExpand || service.images.card}
-          imageAlt={`Why choose Expand for ${service.title}`}
-          label="Why Expand"
-          title="Why Businesses Choose Us"
-          accordion={slug === 'strategy-growth' ? [
+          <LeftRight
+            imageSrc={service.images.whyExpand || service.images.card}
+            imageAlt={`Why choose Expand for ${service.title}`}
+            label="Why Expand"
+            title="Why Businesses Choose Us"
+            accordion={slug === 'strategy-growth' ? [
             {
               id: 1,
               title: "We've Done This Before",
@@ -2035,16 +2037,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               image: service.images.desktop
             },
           ]}
-          autoPlayAccordion={true}
-          autoPlayInterval={10000}
-          buttonText="Let's Talk"
-          buttonHref="/contact"
-          imagePosition="right"
-        />
+            autoPlayAccordion={true}
+            autoPlayInterval={10000}
+            buttonText="Let's Talk"
+            buttonHref="/contact"
+            imagePosition="right"
+          />
 
-        <RecommendedByLeaders />
+          <RecommendedByLeaders />
+          <Blogs />
+        </CollapsibleSection>
+
         <FAQ items={faqItems} />
-        <Blogs />
         <ExpandReady />
         <Footer />
       </main>

@@ -18,8 +18,8 @@ export default function Home() {
     <HeroUpdated
       title="Ready to expand your reach?"
     />
-    <div className="mt-[300px]">
-      <AboutUs />
+    <div className="mt-[120px]">
+      
     </div>
     <OurServices />
 
