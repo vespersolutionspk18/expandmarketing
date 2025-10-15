@@ -264,7 +264,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you, choose you, and drive real revenue, not just traffic.</h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you</h2>
               </div>
             </div>
 
@@ -310,7 +310,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you, choose you, and drive real revenue, not just traffic.</h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you</h2>
               </div>
             </div>
 
@@ -356,7 +356,7 @@ const HeroUpdated: React.FC<HeroUpdatedProps> = ({
                 <h1 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl 4xl:text-9xl font-bold tracking-tight text-black leading-none text-center">
                   {title}
                 </h1>
-                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you, choose you, and drive real revenue, not just traffic.</h2>
+                <h2 className="mt-4 md:mt-6 text-lg md:text-2xl lg:text-3xl text-black font-medium tracking-tight text-center max-w-4xl">Your customers are searching. We make sure they find you</h2>
               </div>
             </div>
 

@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
+
 import { HiArrowUpRight } from 'react-icons/hi2'
-import Button from '../components/Button'
+
 import { getServicesForHomepage } from '@/app/data/services'
 
 interface Service {
@@ -12,8 +12,18 @@ interface Service {
   image: string
 }
 
-// Import services from central controller
-const services: Service[] = getServicesForHomepage()
+// Import services from central controller - get first 9 services
+const regularServices: Service[] = getServicesForHomepage()
+
+// Add the 10th special "More Services" card
+const moreServicesCard: Service = {
+  title: 'More Services We Offer',
+  href: '/services',
+  image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=2000&q=80'
+}
+
+// Combine all services
+const services: Service[] = [...regularServices, moreServicesCard]
 
 const ServiceCard = ({ service }: { service: Service }) => {
   return (
@@ -93,40 +103,7 @@ const OurServices = () => {
 
         {/* Outer container */}
         <div className="grid grid-cols-12 overflow-hidden lg:pt-5 gap-y-3 md:gap-y-7 gap-x-3 md:gap-x-5">
-          <div className="col-span-12">
-
-            {/* Header Section */}
-            <div className="grid grid-cols-12 md:border-b md:border-[#bebebe] md:pb-5 gap-y-3 md:gap-y-7 gap-x-3 md:gap-x-5">
-
-              {/* Title with embedded image */}
-              <div className="col-span-11 md:col-span-9 flex items-end">
-                <h2 className="inline-flex flex-wrap text-balance relative pointer-fine:pr-1 pointer-fine:pb-2 pointer-fine:mt-4 pointer-fine:-mb-3 flex flex-col text-left justify-start text-gray-900 text-6xl/tight md:text-7xl/none lg:text-7xl/none 2xl:text-8xl/[0.9] font-medium tracking-tight">
-                  <div className="flex flex-wrap relative pointer-fine:-mt-6 pointer-fine:pb-6 pointer-fine:overflow-hidden text-left justify-start items-center">
-                    <div className="inline mr-2 pointer-fine:mr-0">Our</div>
-                    <div className="inline shrink-0 flex bg-black/10 relative overflow-hidden bg-black/5 mx-2 pointer-fine:mx-0 aspect-square h-[0.9em] rounded-md">
-                      <div className="w-full h-full relative">
-                        <picture>
-                          <img
-                            src="https://images.pexels.com/photos/7490886/pexels-photo-7490886.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&q=95&fit=crop"
-                            alt="Services"
-                            className="w-full h-full object-cover object-center absolute inset-0"
-                          />
-                        </picture>
-                      </div>
-                    </div>
-                    <div className="inline mr-2 pointer-fine:mr-0">Services</div>
-                  </div>
-                </h2>
-              </div>
-
-              {/* View All Services Button - Desktop */}
-              <div className="col-span-12 md:col-span-3 md:items-center md:justify-end hidden md:flex">
-                <Button href="/services" variant="secondary">
-                  View All Services
-                </Button>
-              </div>
-            </div>
-          </div>
+         
 
           {/* Services Grid */}
           <div className="col-span-12 grid grid-cols-12 gap-x-2">

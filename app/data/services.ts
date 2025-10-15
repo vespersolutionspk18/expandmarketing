@@ -591,10 +591,10 @@ export const getServiceCategories = () => {
 
 /**
  * FOR HOMEPAGE: Get services for grid (title, href, image)
- * Returns only the first 8 most important services
+ * Returns only the first 9 most important services
  */
 export const getServicesForHomepage = () => {
-  return SERVICES.slice(0, 8).map(s => ({
+  return SERVICES.slice(0, 9).map(s => ({
     title: s.title,
     href: `/services/${s.slug}`,
     image: s.images.card

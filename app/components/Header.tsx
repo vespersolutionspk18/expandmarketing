@@ -48,6 +48,7 @@ const Header = memo(() => {
     { label: "Work", href: "/work", hasSubmenu: false },
     { label: "Careers", href: "/careers", hasSubmenu: false },
     { label: "Blog", href: "/blog", hasSubmenu: false },
+     { label: "Contact", href: "/contact", hasSubmenu: false },
   ];
 
   const toggleSubmenu = (submenuId: string | undefined) => {
@@ -116,7 +117,7 @@ const Header = memo(() => {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center">
             <Button href="/get-a-free-estimate" variant="secondary">
-              Get Free Estimate
+              Get Started
             </Button>
           </div>
 
@@ -308,7 +309,7 @@ const Header = memo(() => {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full"
             >
-              Get Free Estimate
+              Get Started
             </Button>
           </div>
         </div>
