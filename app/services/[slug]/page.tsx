@@ -1291,7 +1291,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           ] : contentParagraphs}
         />
 
-        <ServiceCards cards={serviceCards} />
+        {/*<ServiceCards cards={serviceCards} />*/}
 
         <LeftRight
           imageSrc={service.images.process || service.images.desktop}
